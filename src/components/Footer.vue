@@ -10,8 +10,8 @@
           <p>Roffies es una startup tecnológica enfocada en modernizar el mantenimiento automotriz en Lima y, progresivamente, en todo el país. </p>
         </div>
         <div class="footer-partners">
-          <img src="../assets/icons/gob.svg" alt="Gobierno del Perú" class="partner-logo" id="gobierno-peru">
-          <img src="../assets/icons/bcp.svg" alt="BCP" class="partner-logo">
+          <img src="" alt="Gobierno del Perú" class="partner-logo" id="gobierno-peru">
+          <img src="" alt="BCP" class="partner-logo">
         </div>
       </div>
 
@@ -20,43 +20,43 @@
           <div class="footer-column">
             <h4>Mecánicos</h4>
             <ul>
-              <li><a href="caregivers.html">Sé parte del cambio</a></li>
-              <li><a href="caregivers.html">Requisitos para mecánicos registrados</a></li>
-              <li><a href="caregivers.html">Beneficios</a></li>
+              <li><a href="">Sé parte del cambio</a></li>
+              <li><a href="">Requisitos para mecánicos registrados</a></li>
+              <li><a href="">Beneficios</a></li>
             </ul>
           </div>
 
           <div class="footer-column">
             <h4>Propietarios</h4>
             <ul>
-              <li><a href="dependent-persons.html">Únete a nosotros</a></li>
-              <li><a href="../../index.html#testimonios">Testimonios</a></li>
-              <li><a href="dependent-persons.html">Encuentra lo que necesitas</a></li>
+              <li><a href="">Únete a nosotros</a></li>
+              <li><a href="">Testimonios</a></li>
+              <li><a href="">Encuentra lo que necesitas</a></li>
             </ul>
           </div>
 
           <div class="footer-column">
             <h4>Contáctanos</h4>
             <ul>
-              <li><a href="../../index.html#contact-careme">Formulario de contacto</a></li>
-              <li><a href="#contact">Atención al Cliente</a></li>
+              <li><a href="">Formulario de contacto</a></li>
+              <li><a href="">Atención al Cliente</a></li>
             </ul>
           </div>
 
           <div class="footer-column">
             <h4>Nosotros</h4>
             <ul>
-              <li><a href="../../index.html#nosotros">Sobre Nosotros</a></li>
-              <li><a href="../../index.html#nosotros">Conoce nuestra marca</a></li>
-              <li><a href="login.html">Únete al equipo</a></li>
+              <li><a href="">Sobre Nosotros</a></li>
+              <li><a href="">Conoce nuestra marca</a></li>
+              <li><a href="">Únete al equipo</a></li>
             </ul>
           </div>
 
           <div class="footer-column">
             <h4>Ayuda</h4>
             <ul>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#terms">Términos y condiciones</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Términos y condiciones</a></li>
             </ul>
           </div>
         </div>
@@ -64,20 +64,20 @@
 
       <div class="footer-bottom">
         <div class="footer-social">
-          <a href="https://www.facebook.com/" class="social-link" target="_blank" noreferrer="">
-            <img src="../assets/icons/facebook-icon.svg" alt="Facebook" class="social-icon">
+          <a href="https://www.facebook.com/" class="social-link" target="_blank">
+            <img src="" alt="Facebook" class="social-icon">
           </a>
-          <a href="https://x.com/home?lang=es" class="social-link" target="_blank" noreferrer="">
-            <img src="../assets/icons/twitter.svg" alt="Twitter" class="social-icon">
+          <a href="https://x.com/home?lang=es" class="social-link" target="_blank">
+            <img src="" alt="Twitter" class="social-icon">
           </a>
-          <a href="https://www.instagram.com/" class="social-link" target="_blank" noreferrer="">
-            <img src="../assets/icons/instagram.svg" alt="Instagram" class="social-icon">
+          <a href="https://www.instagram.com/" class="social-link" target="_blank">
+            <img src="" alt="Instagram" class="social-icon">
           </a>
-          <a href="https://www.tiktok.com/es/" class="social-link" target="_blank" noreferrer="">
-            <img src="../assets/icons/tiktok.svg" alt="TikTok" class="social-icon">
+          <a href="https://www.tiktok.com/es/" class="social-link" target="_blank">
+            <img src="" alt="TikTok" class="social-icon">
           </a>
-          <a href="https://www.linkedin.com/" class="social-link" target="_blank" noreferrer="">
-            <img src="../assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+          <a href="https://www.linkedin.com/" class="social-link" target="_blank">
+            <img src="" alt="LinkedIn" class="social-icon">
           </a>
         </div>
         <div class="footer-copyright">
@@ -143,10 +143,6 @@
   fill: white;
 }
 
-#fundacion-wiese {
-  height: 14vh;
-}
-
 .partner-logo:hover {
   opacity: 1;
   transform: scale(1.05);
@@ -160,48 +156,9 @@
 
   justify-content: space-between; /* spread out columns */
   flex-wrap: wrap; /* allows wrapping on smaller screens */
-  gap: 2rem;
+
 }
 
-.footer-brand {
-  text-align: center;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.footer-logo-icon {
-  width: 12vh;
-  height: 12vh;
-}
-
-.footer-app-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.app-download {
-  height: 40px;
-  width: auto;
-}
-
-.footer-country {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  color: white;
-  cursor: pointer;
-}
 
 .footer-links {
   display: grid;
@@ -246,7 +203,6 @@
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: left;
   gap: 20px;
 }
 
