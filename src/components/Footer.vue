@@ -9,10 +9,6 @@
         <div class="footer-support-text">
           <p>Roffies es una startup tecnológica enfocada en modernizar el mantenimiento automotriz en Lima y, progresivamente, en todo el país. </p>
         </div>
-        <div class="footer-partners">
-          <img src="" alt="Gobierno del Perú" class="partner-logo" id="gobierno-peru">
-          <img src="" alt="BCP" class="partner-logo">
-        </div>
       </div>
 
       <div class="footer-main">
@@ -65,19 +61,19 @@
       <div class="footer-bottom">
         <div class="footer-social">
           <a href="https://www.facebook.com/" class="social-link" target="_blank">
-            <img src="" alt="Facebook" class="social-icon">
+            <i class="pi pi-facebook social-icon"></i>
           </a>
           <a href="https://x.com/home?lang=es" class="social-link" target="_blank">
-            <img src="" alt="Twitter" class="social-icon">
+            <i class="pi pi-twitter social-icon"></i>
           </a>
           <a href="https://www.instagram.com/" class="social-link" target="_blank">
-            <img src="" alt="Instagram" class="social-icon">
+            <i class="pi pi-instagram social-icon"></i>
           </a>
           <a href="https://www.tiktok.com/es/" class="social-link" target="_blank">
-            <img src="" alt="TikTok" class="social-icon">
+            <i class="pi pi-send social-icon"></i>
           </a>
           <a href="https://www.linkedin.com/" class="social-link" target="_blank">
-            <img src="" alt="LinkedIn" class="social-icon">
+            <i class="pi pi-linkedin social-icon"></i>
           </a>
         </div>
         <div class="footer-copyright">
@@ -236,9 +232,8 @@
 }
 
 .social-icon {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  font-size: 1.5rem;
+  color: #3D44DD;
 }
 
 
