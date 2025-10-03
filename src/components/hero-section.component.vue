@@ -56,7 +56,7 @@ const userLocation = ref('')
                 type="button"
               />
 
-              <a href="/login" class="login-link" aria-label="Iniciar sesión para ver actividad reciente">{{ t('hero.loginLink') }}</a>
+              <a href="#" class="login-link" aria-label="Iniciar sesión para ver actividad reciente" @click.prevent>{{ t('hero.loginLink') }}</a>
             </div>
           </div>
         </div>

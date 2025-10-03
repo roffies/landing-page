@@ -67,8 +67,8 @@ onUnmounted(() => {
     </ul>
 
     <div class="auth-lang hidden lg:flex">
-      <router-link to="/login" class="auth-link">{{ t('navbar.login') }}</router-link>
-      <router-link to="/signup" class="auth-link">{{ t('navbar.register') }}</router-link>
+      <a href="#" class="auth-link" @click.prevent>{{ t('navbar.login') }}</a>
+      <a href="#" class="auth-link" @click.prevent>{{ t('navbar.register') }}</a>
       <button class="lang-btn" @click="toggleLanguage">{{ t('navbar.language') }}</button>
     </div>
 
@@ -87,8 +87,8 @@ onUnmounted(() => {
       </ul>
       
       <div class="mobile-auth">
-        <router-link to="/login" class="auth-link" @click="closeMenu">{{ t('navbar.login') }}</router-link>
-        <router-link to="/signup" class="auth-link" @click="closeMenu">{{ t('navbar.register') }}</router-link>
+        <a href="#" class="auth-link" @click.prevent="closeMenu">{{ t('navbar.login') }}</a>
+        <a href="#" class="auth-link" @click.prevent="closeMenu">{{ t('navbar.register') }}</a>
         <button class="lang-btn" @click="toggleLanguage">{{ t('navbar.language') }}</button>
       </div>
     </div>
