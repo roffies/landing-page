@@ -302,7 +302,7 @@ const userLocation = ref('')
 
 .see-workshops-btn {
   width: auto;
-  background: var(--accent-light);
+  background: var(--primary-light);
   color: #000;
   border: none;
   border-radius: var(--border-radius-sm);
@@ -311,14 +311,14 @@ const userLocation = ref('')
   font-weight: 700;
   transition: all 0.3s ease;
   margin: 1.5rem auto 1rem auto;
-  box-shadow: 0 6px 20px rgba(59, 108, 90, 0.4);
+  box-shadow: 0 4px 15px rgba(59, 108, 90, 0.3);
   display: block;
   text-transform: uppercase;
 }
 
 .see-workshops-btn:hover {
-  background: var(--primary-light) !important; 
-  box-shadow: 0 8px 25px rgba(59, 108, 90, 0.5);
+  background: var(--accent-light) !important; 
+  box-shadow: 0 6px 20px rgba(59, 108, 90, 0.4);
   transform: translateY(-3px);
 }
 

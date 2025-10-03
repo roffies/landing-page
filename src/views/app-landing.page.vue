@@ -8,8 +8,8 @@ import Card from 'primevue/card'
 
 <template>
   <Navbar />
-  <div class="container">
   <HeroSection />
+  <div class="container">
   <HowItWorksSection />
   <section id="beneficios" class="section" role="region" aria-label="Beneficios de SmartCare">
     <div class="text-center mb-6">

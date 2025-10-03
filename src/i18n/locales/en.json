@@ -1,13 +1,29 @@
 {
   "navbar": {
-    "logo": "ROFFIES",
+    "logo": "SMARTCARE",
     "functions": "Functions",
     "benefits": "Benefits",
     "offerings": "What We Offer",
     "about": "About Us",
     "login": "Sign In",
     "register": "Register",
-    "language": "🌐 ENG"
+    "ariaLabel": "Main navigation",
+    "logoAriaLabel": "Go to home - SmartCare",
+    "logoAlt": "SmartCare logo",
+    "navigationAriaLabel": "Main navigation menu",
+    "functionsAriaLabel": "Go to functions section",
+    "benefitsAriaLabel": "Go to benefits section",
+    "offeringsAriaLabel": "Go to offerings section",
+    "aboutAriaLabel": "Go to about us section",
+    "loginAriaLabel": "Login to the application",
+    "registerAriaLabel": "Register in the application",
+    "menuToggleAriaLabel": "Open mobile navigation menu",
+    "menuOverlayAriaLabel": "Close navigation menu",
+    "mobileMenuAriaLabel": "Mobile navigation menu",
+    "mobileNavigationAriaLabel": "Mobile navigation",
+    "languageSwitcherAriaLabel": "Language selector",
+    "spanishAriaLabel": "Switch to Spanish",
+    "englishAriaLabel": "Switch to English"
   },
   "hero": {
     "title": "Take care of your car",
@@ -23,7 +39,7 @@
     "step": "Step",
     "register": {
       "title": "Register",
-      "description": "Register your vehicle in Roffies to get all our functionalities"
+      "description": "Register your vehicle in SmartCare to get all our functionalities"
     },
     "quote": {
       "title": "Quote",
@@ -37,49 +53,5 @@
       "title": "Stay Informed",
       "description": "Receive real-time notifications about your vehicle maintenance."
     }
-  },
-  "benefits": {
-    "title": "Benefits that improve your experience",
-    "subtitle": "Keep total control of the service with our tools",
-    "history": {
-      "title": "History",
-      "description": "Digital maintenance history."
-    },
-    "alerts": {
-      "title": "Alerts",
-      "description": "Maintenance alerts based on data by brand and usage"
-    },
-    "emergencies": {
-      "title": "Emergencies",
-      "description": "For breakdowns on the road, direct with tow trucks and automatic referral to the nearest workshop"
-    },
-    "prices": {
-      "title": "Best Prices",
-      "description": "Real-time quote generator between affiliated workshops"
-    }
-  },
-  "offerings": {
-    "title": "What we offer",
-    "subtitle": "Services designed to maximize your vehicle's performance",
-    "preventive": {
-      "title": "Preventive Maintenance",
-      "description": "Solve problems before they occur"
-    },
-    "monitoring": {
-      "title": "Real-time Monitoring",
-      "description": "View your vehicle data at all times."
-    },
-    "security": {
-      "title": "Advanced Security",
-      "description": "Guaranteed protection for your information."
-    },
-    "support": {
-      "title": "Dedicated Support",
-      "description": "Personalized assistance when you need it."
-    }
-  },
-  "team": {
-    "title": "Our Team",
-    "role": "Software Engineering"
   }
 }

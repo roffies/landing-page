@@ -7,7 +7,7 @@
     <div class="footer-content">
       <div class="footer-top">
         <div class="footer-support-text">
-          <p>Roffies es una startup tecnológica enfocada en modernizar el mantenimiento automotriz en Lima y, progresivamente, en todo el país. </p>
+          <p>SmartCare es una startup tecnológica enfocada en modernizar el mantenimiento automotriz en Lima y, progresivamente, en todo el país. </p>
         </div>
       </div>
 
@@ -77,7 +77,7 @@
           </a>
         </div>
         <div class="footer-copyright">
-          <p>© 2025 Roffies Perú, S.L.</p>
+          <p>© 2025 SmartCare Perú, S.L.</p>
         </div>
       </div>
     </div>

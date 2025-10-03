@@ -1,45 +1,84 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import LanguageSwitcher from './language-switcher.component.vue'
 
 const { t, locale } = useI18n()
 
 const isMenuOpen = ref(false)
-const isScrolled = ref(false)
-const isHovered = ref(false)
+const isVisible = ref(true)
+const lastScrollY = ref(0)
+const hasBackground = ref(false)
 
-const toggleMenu = () => {
+const SCROLL_THRESHOLD = 100
+const SUPPORTED_LOCALES = ['es', 'en'] as const
+
+const navigationLinks = [
+  {
+    id: 'functions',
+    href: '#funciones',
+    labelKey: 'navbar.functions',
+    ariaLabelKey: 'navbar.functionsAriaLabel'
+  },
+  {
+    id: 'benefits',
+    href: '#beneficios',
+    labelKey: 'navbar.benefits',
+    ariaLabelKey: 'navbar.benefitsAriaLabel'
+  },
+  {
+    id: 'offerings',
+    href: '#ofrecemos',
+    labelKey: 'navbar.offerings',
+    ariaLabelKey: 'navbar.offeringsAriaLabel'
+  },
+  {
+    id: 'about',
+    href: '#team',
+    labelKey: 'navbar.about',
+    ariaLabelKey: 'navbar.aboutAriaLabel'
+  }
+] as const
+
+const toggleMenu = (): void => {
   isMenuOpen.value = !isMenuOpen.value
 }
 
-const closeMenu = () => {
+const closeMenu = (): void => {
   isMenuOpen.value = false
 }
 
-const handleScroll = () => {
-  isScrolled.value = window.scrollY > 50
+const handleScroll = (): void => {
+  const currentScrollY = window.scrollY
+  
+  if (currentScrollY > lastScrollY.value && currentScrollY > SCROLL_THRESHOLD) {
+    isVisible.value = false
+  } else {
+    isVisible.value = true
+  }
+  
+  hasBackground.value = currentScrollY > SCROLL_THRESHOLD && isVisible.value
+  
+  lastScrollY.value = currentScrollY
 }
 
-const handleMouseEnter = () => {
-  isHovered.value = true
+const setLanguage = (newLocale: string): void => {
+  if (SUPPORTED_LOCALES.includes(newLocale as any)) {
+    locale.value = newLocale
+    localStorage.setItem('locale', newLocale)
+  }
 }
 
-const handleMouseLeave = () => {
-  isHovered.value = false
-}
-
-const toggleLanguage = () => {
-  const newLocale = locale.value === 'es' ? 'en' : 'es'
-  locale.value = newLocale
-  localStorage.setItem('locale', newLocale)
+const initializeLocale = (): void => {
+  const savedLocale = localStorage.getItem('locale')
+  if (savedLocale && SUPPORTED_LOCALES.includes(savedLocale as any)) {
+    locale.value = savedLocale
+  }
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-  const savedLocale = localStorage.getItem('locale')
-  if (savedLocale && ['es', 'en'].includes(savedLocale)) {
-    locale.value = savedLocale
-  }
+  window.addEventListener('scroll', handleScroll, { passive: true })
+  initializeLocale()
 })
 
 onUnmounted(() => {
@@ -51,45 +90,136 @@ onUnmounted(() => {
   <nav 
     class="navbar" 
     :class="{ 
-      'navbar-scrolled': isScrolled, 
-      'navbar-hovered': isHovered 
+      'navbar-visible': isVisible,
+      'navbar-hidden': !isVisible,
+      'navbar-with-background': hasBackground
     }"
-    @mouseenter="handleMouseEnter"
-    @mouseleave="handleMouseLeave"
+    role="navigation"
+    :aria-label="t('navbar.ariaLabel')"
   >
-    <div class="logo"><a href="#hero">{{ t('navbar.logo') }}</a></div>
+    <div class="logo">
+      <a 
+        href="#hero" 
+        :aria-label="t('navbar.logoAriaLabel')"
+      >
+        <img 
+          src="/images/smartcare-logo.png" 
+          :alt="t('navbar.logoAlt')" 
+          class="logo-image" 
+        />
+        <span class="logo-text">{{ t('navbar.logo') }}</span>
+      </a>
+    </div>
 
-    <ul class="nav-links hidden lg:flex">
-      <li><a href="#funciones" @click="closeMenu">{{ t('navbar.functions') }}</a></li>
-      <li><a href="#beneficios" @click="closeMenu">{{ t('navbar.benefits') }}</a></li>
-      <li><a href="#ofrecemos" @click="closeMenu">{{ t('navbar.offerings') }}</a></li>
-      <li><a href="#team" @click="closeMenu">{{ t('navbar.about') }}</a></li>
+    <ul 
+      class="nav-links hidden lg:flex" 
+      role="menubar"
+      :aria-label="t('navbar.navigationAriaLabel')"
+    >
+      <li 
+        v-for="link in navigationLinks" 
+        :key="link.id"
+        role="none"
+      >
+        <a 
+          :href="link.href" 
+          :aria-label="t(link.ariaLabelKey)"
+          @click="closeMenu"
+          role="menuitem"
+        >
+          {{ t(link.labelKey) }}
+        </a>
+      </li>
     </ul>
 
     <div class="auth-lang hidden lg:flex">
-      <a href="#" class="auth-link" @click.prevent>{{ t('navbar.login') }}</a>
-      <a href="#" class="auth-link" @click.prevent>{{ t('navbar.register') }}</a>
-      <button class="lang-btn" @click="toggleLanguage">{{ t('navbar.language') }}</button>
+      <LanguageSwitcher 
+        :current-locale="locale"
+        @language-change="setLanguage"
+      />
+      <a 
+        href="#" 
+        class="auth-link" 
+        :aria-label="t('navbar.loginAriaLabel')"
+        @click.prevent
+      >
+        {{ t('navbar.login') }}
+      </a>
+      <a 
+        href="#" 
+        class="auth-link register-btn" 
+        :aria-label="t('navbar.registerAriaLabel')"
+        @click.prevent
+      >
+        {{ t('navbar.register') }}
+      </a>
     </div>
 
-    <button class="mobile-menu-btn lg:hidden" @click="toggleMenu">
-      <i class="pi pi-bars"></i>
+    <button 
+      class="mobile-menu-btn lg:hidden" 
+      :aria-label="t('navbar.menuToggleAriaLabel')"
+      :aria-expanded="isMenuOpen"
+      @click="toggleMenu"
+    >
+      <i class="pi pi-bars" aria-hidden="true"></i>
     </button>
 
-    <div v-if="isMenuOpen" class="mobile-menu-overlay" @click="closeMenu"></div>
+    <div 
+      v-if="isMenuOpen" 
+      class="mobile-menu-overlay" 
+      :aria-label="t('navbar.menuOverlayAriaLabel')"
+      @click="closeMenu"
+    ></div>
 
-    <div class="mobile-menu" :class="{ 'mobile-menu-open': isMenuOpen }">
-      <ul class="mobile-nav-links">
-        <li><a href="#funciones" @click="closeMenu">{{ t('navbar.functions') }}</a></li>
-        <li><a href="#beneficios" @click="closeMenu">{{ t('navbar.benefits') }}</a></li>
-        <li><a href="#ofrecemos" @click="closeMenu">{{ t('navbar.offerings') }}</a></li>
-        <li><a href="#team" @click="closeMenu">{{ t('navbar.about') }}</a></li>
+    <div 
+      class="mobile-menu" 
+      :class="{ 'mobile-menu-open': isMenuOpen }"
+      role="menu"
+      :aria-label="t('navbar.mobileMenuAriaLabel')"
+    >
+      <ul 
+        class="mobile-nav-links" 
+        role="menubar"
+        :aria-label="t('navbar.mobileNavigationAriaLabel')"
+      >
+        <li 
+          v-for="link in navigationLinks" 
+          :key="`mobile-${link.id}`"
+          role="none"
+        >
+          <a 
+            :href="link.href" 
+            :aria-label="t(link.ariaLabelKey)"
+            @click="closeMenu"
+            role="menuitem"
+          >
+            {{ t(link.labelKey) }}
+          </a>
+        </li>
       </ul>
       
       <div class="mobile-auth">
-        <a href="#" class="auth-link" @click.prevent="closeMenu">{{ t('navbar.login') }}</a>
-        <a href="#" class="auth-link" @click.prevent="closeMenu">{{ t('navbar.register') }}</a>
-        <button class="lang-btn" @click="toggleLanguage">{{ t('navbar.language') }}</button>
+        <LanguageSwitcher 
+          :current-locale="locale"
+          @language-change="setLanguage"
+          class="mobile-lang-switcher"
+        />
+        <a 
+          href="#" 
+          class="auth-link" 
+          :aria-label="t('navbar.loginAriaLabel')"
+          @click.prevent="closeMenu"
+        >
+          {{ t('navbar.login') }}
+        </a>
+        <a 
+          href="#" 
+          class="auth-link register-btn" 
+          :aria-label="t('navbar.registerAriaLabel')"
+          @click.prevent="closeMenu"
+        >
+          {{ t('navbar.register') }}
+        </a>
       </div>
     </div>
   </nav>
@@ -101,38 +231,70 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
-  background: rgba(30, 41, 59, 0.9);
-  backdrop-filter: blur(10px);
+  height: 70px;
+  background: transparent !important;
+  backdrop-filter: none;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
   z-index: 1000;
-  transition: all 0.3s ease;
-  transform: translateY(-100%);
-}
-
-.navbar-scrolled {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0);
-  background: rgba(30, 41, 59, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-hovered {
-  background: rgba(30, 41, 59, 1);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+.navbar-visible {
+  transform: translateY(0);
+  background: transparent !important;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+  background: transparent !important;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.navbar-with-background {
+  background: linear-gradient(
+    180deg,
+    rgba(66, 103, 102, 0.98) 0%,
+    rgba(66, 103, 102, 0.9) 50%,
+    rgba(66, 103, 102, 0.8) 100%
+  ) !important;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(66, 103, 102, 0.4);
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   color: white;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--primary-light);
 }
 
 .nav-links {
@@ -150,29 +312,31 @@ onUnmounted(() => {
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-.nav-links a::before {
+.nav-links a::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary-light);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
-.nav-links a:hover::before {
-  left: 100%;
+.nav-links a:hover::after {
+  width: 80%;
 }
 
 .nav-links a:hover {
   background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-light);
   transform: translateY(-2px);
 }
 
@@ -188,42 +352,54 @@ onUnmounted(() => {
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: all 0.3s ease;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .auth-link:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-2px);
 }
 
-.lang-btn {
-  background: none;
-  border: 1px solid #fff;
-  border-radius: 4px;
-  padding: 0.3rem 0.6rem;
-  color: white;
-  cursor: pointer;
+.register-btn {
+  background: var(--primary-light) !important;
+  color: #000 !important;
+  border: none !important;
+  border-radius: var(--border-radius-sm) !important;
+  padding: 0.5rem 1.5rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(59, 108, 90, 0.3) !important;
+  text-transform: uppercase !important;
 }
 
-.lang-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+.register-btn:hover {
+  background: var(--accent-light) !important;
+  color: #000 !important;
+  box-shadow: 0 6px 20px rgba(59, 108, 90, 0.4) !important;
+  transform: translateY(-2px) !important;
 }
+
 
 .mobile-menu-btn {
-  background: none;
-  border: none;
+  background: var(--primary-medium);
+  border: 1px solid var(--primary-light);
+  border-radius: 8px;
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
+  transition: all 0.3s ease;
 }
 
 .mobile-menu-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  transform: scale(1.05);
 }
 
 .mobile-menu-overlay {
@@ -239,11 +415,12 @@ onUnmounted(() => {
 /* Mobile Menu */
 .mobile-menu {
   position: fixed;
-  top: 60px;
+  top: 70px;
   right: -100%;
   width: 280px;
-  height: calc(100vh - 60px);
-  background: #1e293b;
+  height: calc(100vh - 70px);
+  background: var(--primary-dark);
+  backdrop-filter: blur(20px);
   transition: right 0.3s ease;
   z-index: 999;
   padding: 2rem;
@@ -275,7 +452,11 @@ onUnmounted(() => {
 }
 
 .mobile-nav-links a:hover {
-  color: #3b82f6;
+  color: var(--primary-light);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin: -0.5rem;
 }
 
 .mobile-auth {
@@ -287,21 +468,41 @@ onUnmounted(() => {
 
 .mobile-auth .auth-link {
   padding: 0.75rem 1rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   text-align: center;
-  transition: background 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .mobile-auth .auth-link:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
+  transform: translateY(-2px);
 }
 
-.mobile-auth .lang-btn {
-  width: 100%;
-  padding: 0.75rem;
-  text-align: center;
+
+.mobile-auth .register-btn {
+  background: var(--primary-light) !important;
+  color: #000 !important;
+  border: none !important;
+  border-radius: var(--border-radius-sm) !important;
+  padding: 0.75rem 1.5rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(59, 108, 90, 0.3) !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+}
+
+.mobile-auth .register-btn:hover {
+  background: var(--accent-light) !important;
+  color: #000 !important;
+  box-shadow: 0 6px 20px rgba(59, 108, 90, 0.4) !important;
+  transform: translateY(-2px) !important;
 }
 
 /* Responsive Utilities */
