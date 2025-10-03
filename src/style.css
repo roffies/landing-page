@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Urbanist', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,6 +11,33 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Color palette variables */
+  --primary-dark: #426766;
+  --primary-medium: #3B6C5A;
+  --primary-light: #88BCA4;
+  --accent-light: #C9E3CA;
+  --accent-lighter: #D5EDD7;
+  --accent-lightest: #EFFFFD;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Remove outline from all buttons globally */
+button:focus,
+button:active,
+.p-button:focus,
+.p-button:active {
+  outline: none !important;
+}
+
+button:active,
+.p-button:active {
+  transform: translateY(1px);
 }
 
 html {
