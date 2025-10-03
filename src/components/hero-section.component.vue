@@ -2,7 +2,9 @@
 import InputText from 'primevue/inputtext'
 import Button from 'primevue/button'
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const userLocation = ref('')
 
 // TODO: Implement workshop search functionality
@@ -19,10 +21,10 @@ const userLocation = ref('')
         <div class="col-12">
           <div class="hero-content">
             <h1 class="hero-title mb-3">
-              <span class="d-block">Cuida tu auto</span>
-              <span class="d-block">antes de que falle</span>
+              <span class="d-block">{{ t('hero.title') }}</span>
+              <span class="d-block">{{ t('hero.subtitle') }}</span>
             </h1>
-            <h2 class="hero-subtitle mb-5">Con SmartCare recibe alertas de mantenimiento y encuentra el taller más cercano a ti.</h2>
+            <h2 class="hero-subtitle mb-5">{{ t('hero.description') }}</h2>
 
             <div class="location-inputs">
               <div class="location-input-container">
@@ -30,7 +32,7 @@ const userLocation = ref('')
                   <i class="pi pi-map-marker location-icon" aria-hidden="true"></i>
                   <InputText 
                     v-model="userLocation" 
-                    placeholder="Ingresa tu ubicación"
+                    :placeholder="t('hero.locationPlaceholder')"
                     class="location-field"
                     aria-label="Campo de ubicación para buscar talleres"
                     autocomplete="address-level1"
@@ -48,13 +50,13 @@ const userLocation = ref('')
               </div>
 
               <Button 
-                label="Ver talleres"
+                :label="t('hero.searchButton')"
                 class="see-workshops-btn"
                 aria-label="Buscar talleres cercanos"
                 type="button"
               />
 
-              <a href="/login" class="login-link" aria-label="Iniciar sesión para ver actividad reciente">Inicia sesión para ver tu actividad reciente</a>
+              <a href="/login" class="login-link" aria-label="Iniciar sesión para ver actividad reciente">{{ t('hero.loginLink') }}</a>
             </div>
           </div>
         </div>

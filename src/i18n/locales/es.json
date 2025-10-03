@@ -1,0 +1,84 @@
+{
+  "navbar": {
+    "logo": "ROFFIES",
+    "functions": "Funciones",
+    "benefits": "Beneficios",
+    "offerings": "Qué Ofrecemos",
+    "about": "Nosotros",
+    "login": "Iniciar Sesión",
+    "register": "Registrar",
+    "language": "🌐 ESP"
+  },
+  "hero": {
+    "title": "Cuida tu auto",
+    "subtitle": "antes de que falle",
+    "description": "Con SmartCare recibe alertas de mantenimiento y encuentra el taller más cercano a ti.",
+    "locationPlaceholder": "Ingresa tu ubicación",
+    "searchButton": "Ver talleres",
+    "loginLink": "Inicia sesión para ver tu actividad reciente"
+  },
+  "functions": {
+    "title": "Cómo funciona",
+    "subtitle": "Pasos para el control total del mantenimiento de tu vehículo",
+    "register": {
+      "title": "Registra",
+      "description": "Registra tu vehículo en Roffies para obtener todas nuestras funcionalidades"
+    },
+    "quote": {
+      "title": "Cotiza",
+      "description": "Genera una cotización para el mantenimiento de tu vehículo"
+    },
+    "protect": {
+      "title": "Protégete",
+      "description": "Conecta con grúas y talleres cercanos en emergencias."
+    },
+    "inform": {
+      "title": "Infórmate",
+      "description": "Recibe notificaciones a tiempo real sobre mantenimientos de tu vehículo."
+    }
+  },
+  "benefits": {
+    "title": "Beneficios que mejoran tu experiencia",
+    "subtitle": "Manten el control total del servicio con nuestras herramientas",
+    "history": {
+      "title": "Historial",
+      "description": "Historial digital de mantenimientos."
+    },
+    "alerts": {
+      "title": "Alerta",
+      "description": "Alertas de mantenimiento basadas en datos por marca y uso"
+    },
+    "emergencies": {
+      "title": "Emergencias",
+      "description": "Para averías en ruta, directo con grúas y derivación automática al taller más cercano"
+    },
+    "prices": {
+      "title": "Mejores Precios",
+      "description": "Cotizador en tiempo real entre talleres afiliados"
+    }
+  },
+  "offerings": {
+    "title": "Lo que ofrecemos",
+    "subtitle": "Servicios diseñados para maximizar el rendimiento de tu vehículo",
+    "preventive": {
+      "title": "Mantenimiento Preventivo",
+      "description": "Resuelve problemas antes de que ocurran"
+    },
+    "monitoring": {
+      "title": "Monitoreo en Tiempo Real",
+      "description": "Visualiza datos de tu vehículo en todo momento."
+    },
+    "security": {
+      "title": "Seguridad Avanzada",
+      "description": "Protección garantizada para tu información."
+    },
+    "support": {
+      "title": "Soporte Dedicado",
+      "description": "Asistencia personalizada cuando la necesites."
+    }
+  },
+  "team": {
+    "title": "Nuestro Equipo",
+    "role": "Ingeniería de Software"
+  }
+}

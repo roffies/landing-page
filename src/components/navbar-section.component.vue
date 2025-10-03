@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t, locale } = useI18n()
 
 const isMenuOpen = ref(false)
 const isScrolled = ref(false)
@@ -25,8 +28,18 @@ const handleMouseLeave = () => {
   isHovered.value = false
 }
 
+const toggleLanguage = () => {
+  const newLocale = locale.value === 'es' ? 'en' : 'es'
+  locale.value = newLocale
+  localStorage.setItem('locale', newLocale)
+}
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  const savedLocale = localStorage.getItem('locale')
+  if (savedLocale && ['es', 'en'].includes(savedLocale)) {
+    locale.value = savedLocale
+  }
 })
 
 onUnmounted(() => {
@@ -44,19 +57,19 @@ onUnmounted(() => {
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >
-    <div class="logo"><a href="#hero">ROFFIES</a></div>
+    <div class="logo"><a href="#hero">{{ t('navbar.logo') }}</a></div>
 
     <ul class="nav-links hidden lg:flex">
-      <li><a href="#funciones" @click="closeMenu">Funciones</a></li>
-      <li><a href="#beneficios" @click="closeMenu">Beneficios</a></li>
-      <li><a href="#ofrecemos" @click="closeMenu">Qué Ofrecemos</a></li>
-      <li><a href="#team" @click="closeMenu">Nosotros</a></li>
+      <li><a href="#funciones" @click="closeMenu">{{ t('navbar.functions') }}</a></li>
+      <li><a href="#beneficios" @click="closeMenu">{{ t('navbar.benefits') }}</a></li>
+      <li><a href="#ofrecemos" @click="closeMenu">{{ t('navbar.offerings') }}</a></li>
+      <li><a href="#team" @click="closeMenu">{{ t('navbar.about') }}</a></li>
     </ul>
 
     <div class="auth-lang hidden lg:flex">
-      <router-link to="/login" class="auth-link">Iniciar Sesión</router-link>
-      <router-link to="/signup" class="auth-link">Registrar</router-link>
-      <button class="lang-btn">🌐 ESP</button>
+      <router-link to="/login" class="auth-link">{{ t('navbar.login') }}</router-link>
+      <router-link to="/signup" class="auth-link">{{ t('navbar.register') }}</router-link>
+      <button class="lang-btn" @click="toggleLanguage">{{ t('navbar.language') }}</button>
     </div>
 
     <button class="mobile-menu-btn lg:hidden" @click="toggleMenu">
@@ -67,16 +80,16 @@ onUnmounted(() => {
 
     <div class="mobile-menu" :class="{ 'mobile-menu-open': isMenuOpen }">
       <ul class="mobile-nav-links">
-        <li><a href="#funciones" @click="closeMenu">Funciones</a></li>
-        <li><a href="#beneficios" @click="closeMenu">Beneficios</a></li>
-        <li><a href="#ofrecemos" @click="closeMenu">Qué Ofrecemos</a></li>
-        <li><a href="#team" @click="closeMenu">Nosotros</a></li>
+        <li><a href="#funciones" @click="closeMenu">{{ t('navbar.functions') }}</a></li>
+        <li><a href="#beneficios" @click="closeMenu">{{ t('navbar.benefits') }}</a></li>
+        <li><a href="#ofrecemos" @click="closeMenu">{{ t('navbar.offerings') }}</a></li>
+        <li><a href="#team" @click="closeMenu">{{ t('navbar.about') }}</a></li>
       </ul>
       
       <div class="mobile-auth">
-        <router-link to="/login" class="auth-link" @click="closeMenu">Iniciar Sesión</router-link>
-        <router-link to="/signup" class="auth-link" @click="closeMenu">Registrar</router-link>
-        <button class="lang-btn">🌐 ESP</button>
+        <router-link to="/login" class="auth-link" @click="closeMenu">{{ t('navbar.login') }}</router-link>
+        <router-link to="/signup" class="auth-link" @click="closeMenu">{{ t('navbar.register') }}</router-link>
+        <button class="lang-btn" @click="toggleLanguage">{{ t('navbar.language') }}</button>
       </div>
     </div>
   </nav>
