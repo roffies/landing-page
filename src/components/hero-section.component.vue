@@ -6,8 +6,6 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 const userLocation = ref('')
-
-// TODO: Implement workshop search functionality
 </script>
 
 <template>
@@ -134,10 +132,44 @@ const userLocation = ref('')
   margin: 0 auto;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: 2vh;
+  }
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  .location-input-container {
+    max-width: 280px;
+  }
+  .location-input {
+    padding: 0.3rem 0.6rem;
+    height: 32px;
+    min-height: 32px;
+  }
+  .location-icon {
+    font-size: 0.9rem;
+    margin-right: 0.4rem;
+  }
+  .location-field {
+    font-size: 0.75rem;
+  }
+  .see-workshops-btn {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.8rem;
+    margin: 0.8rem auto 0.4rem auto;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-section {
+    padding-top: 3vh;
+  }
+  .hero-title {
+    font-size: 3.2rem;
   }
   .hero-subtitle {
     font-size: 1rem;
@@ -164,7 +196,25 @@ const userLocation = ref('')
   }
 }
 
+@media (min-width: 769px) and (max-width: 1199px) {
+  .hero-section {
+    padding-top: 5vh;
+  }
+  .hero-title {
+    font-size: 4rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
 @media (min-width: 1200px) {
+  .hero-section {
+    padding-top: 8vh;
+  }
+  .hero-title {
+    font-size: 4.5rem;
+  }
   .hero-subtitle {
     font-size: 1.2rem;
   }
@@ -284,7 +334,6 @@ const userLocation = ref('')
   color: var(--primary-light);
 }
 
-/* Override PrimeVue styles */
 :deep(.p-inputtext) {
   border: none;
   background: transparent;
