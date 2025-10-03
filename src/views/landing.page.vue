@@ -156,21 +156,21 @@ import Card from 'primevue/card'
       </div>
       <div class="col-12 sm:col-6 md:col-4 lg:col-2-4">
         <Card class="team-card p-shadow-3">
-          <template #header> <img src="/images/Luis Sebastián Rubio Ortiz.jpg" alt="Luis Sebastián Rubio Ortiz" class="team-img"/> </template>
+          <template #header> <img src="/images/luis-sebastian-rubio-ortiz.jpg" alt="Luis Sebastián Rubio Ortiz" class="team-img"/> </template>
           <template #title> Luis Sebastián Rubio Ortiz </template>
           <template #content> Ingeniería de Software </template>
         </Card>
       </div>
       <div class="col-12 sm:col-6 md:col-4 lg:col-2-4">
         <Card class="team-card p-shadow-3">
-          <template #header> <img src="/images/profile_rubens_bendezu.jpeg" alt="Rubens Bendezú" class="team-img"/> </template>
+          <template #header> <img src="/images/profile-rubens-bendezu.jpeg" alt="Rubens Bendezú" class="team-img"/> </template>
           <template #title> Rubens Bendezú </template>
           <template #content> Ingeniería de Software </template>
         </Card>
       </div>
       <div class="col-12 sm:col-6 md:col-4 lg:col-2-4">
         <Card class="team-card p-shadow-3">
-          <template #header> <img src="/images/Pierina_Almandroz_Carbajal.jpeg" alt="Pierina Almadroz Carbajal" class="team-img"/> </template>
+          <template #header> <img src="/images/pierina-almandroz-carbajal.jpeg" alt="Pierina Almadroz Carbajal" class="team-img"/> </template>
           <template #title> Pierina Almadroz Carbajal</template>
           <template #content> Ingeniería de Software </template>
         </Card>
