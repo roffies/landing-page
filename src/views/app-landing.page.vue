@@ -2,6 +2,7 @@
 import Navbar from "@/components/navbar-section.component.vue";
 import Footer from "@/components/footer-section.component.vue"
 import HeroSection from "@/components/hero-section.component.vue"
+import HowItWorksSection from "@/components/how-it-works-section.component.vue"
 import Card from 'primevue/card'
 </script>
 
@@ -9,50 +10,7 @@ import Card from 'primevue/card'
   <Navbar />
   <div class="container">
   <HeroSection />
-  <section id="funciones" class="section" role="region" aria-label="Cómo funciona SmartCare">
-    <div class="text-center mb-6">
-      <h2>Cómo funciona</h2>
-      <p>Pasos para el control total del mantenimiento de tu vehículo</p>
-    </div>
-    <div class="grid">
-      <div class="col-12 md:col-6 lg:col-3">
-        <div class="feature-card">
-          <div class="badge">1</div>
-          <i class="pi pi-cog" aria-hidden="true"></i>
-          <h3>Registra</h3>
-          <p>Registra tu vehículo en Roffies para obtener todas nuestras funcionalidades</p>
-        </div>
-      </div>
-
-      <div class="col-12 md:col-6 lg:col-3">
-        <div class="feature-card">
-          <div class="badge">2</div>
-          <i class="pi pi-bolt" aria-hidden="true"></i>
-          <h3>Cotiza</h3>
-          <p>Genera una cotización para el mantenimiento de tu vehículo</p>
-        </div>
-      </div>
-
-      <div class="col-12 md:col-6 lg:col-3">
-        <div class="feature-card">
-          <div class="badge">3</div>
-          <i class="pi pi-shield" aria-hidden="true"></i>
-          <h3>Protégete</h3>
-          <p>Conecta con grúas y talleres cercanos en emergencias.</p>
-        </div>
-      </div>
-
-      <div class="col-12 md:col-6 lg:col-3">
-        <div class="feature-card">
-          <div class="badge">4</div>
-          <i class="pi pi-users" aria-hidden="true"></i>
-          <h3>Infórmate</h3>
-          <p>Recibe notificaciones a tiempo real sobre mantenimientos de tu vehículo.</p>
-        </div>
-      </div>
-    </div>
-
-  </section>
+  <HowItWorksSection />
   <section id="beneficios" class="section" role="region" aria-label="Beneficios de SmartCare">
     <div class="text-center mb-6">
       <h2>Beneficios que mejoran tu experiencia</h2>
@@ -192,47 +150,6 @@ import Card from 'primevue/card'
 <style scoped>
 
 
-.feature-card {
-  position: relative;
-  background: #fff;
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-.feature-card:hover {
-  transform: translateY(-6px);
-}
-.feature-card i {
-  font-size: 2rem;
-  color: #3b82f6; /* blue accent */
-  margin-bottom: 1rem;
-}
-.feature-card h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-}
-.feature-card p {
-  color: #555;
-  font-size: 0.95rem;
-}
-.badge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background: #3b82f6;
-  color: white;
-  font-size: 0.9rem;
-  font-weight: bold;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
 
 
 
