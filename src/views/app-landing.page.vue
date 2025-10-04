@@ -26,5 +26,31 @@ const { t } = useI18n()
 <style scoped>
 main {
   min-height: 100vh;
+  background: linear-gradient(180deg, 
+    var(--accent-lightest) 0%, 
+    var(--accent-lighter) 25%, 
+    var(--accent-light) 50%, 
+    var(--accent-lighter) 75%, 
+    var(--accent-lightest) 100%
+  );
+  position: relative;
+  overflow: hidden;
 }
+
+main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+main > * {
+  position: relative;
+  z-index: 1;
+}
+
 </style>

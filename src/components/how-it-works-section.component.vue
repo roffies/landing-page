@@ -71,8 +71,7 @@ const processSteps = [
   width: 100%;
   margin: 0;
   padding: var(--spacing-xxxl) var(--spacing-xl);
-  background: var(--accent-light) !important;
-  border-bottom: 1px solid var(--accent-light);
+  background: transparent;
   box-sizing: border-box;
 }
 

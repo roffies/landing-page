@@ -76,7 +76,7 @@ const teamMembers = [
 .team-section {
   padding: var(--spacing-xxxl) var(--spacing-xl);
   text-align: center;
-  background: #ffffff;
+  background: transparent;
 }
 
 .team-container {

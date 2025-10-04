@@ -88,16 +88,17 @@ const footerSections = [
 .main-footer {
   position: relative;
   width: 100%;
-  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 2rem 2rem 0 0;
   padding: var(--spacing-xxxl) var(--spacing-xl);
   color: var(--primary-dark);
+  background: linear-gradient(180deg, var(--accent-lightest) 0%, var(--primary-light) 60%, #162323 100%);
+  overflow: hidden;
 }
+
 
 .footer-content {
   width: 100%;
@@ -136,7 +137,6 @@ const footerSections = [
 }
 
 .footer-copyright {
-  color: var(--primary-medium);
   font-size: var(--font-size-sm);
   margin: 0;
   text-align: center;
@@ -167,7 +167,6 @@ const footerSections = [
 .footer-section-title {
   font-size: var(--font-size-xs);
   font-weight: 600;
-  color: var(--primary-dark);
   margin: 0 0 var(--spacing-md) 0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -189,7 +188,7 @@ const footerSections = [
 .footer-link {
   display: inline-flex;
   align-items: center;
-  color: var(--primary-medium);
+  color: black;
   text-decoration: none;
   font-size: var(--font-size-sm);
   transition: var(--transitions-color);
@@ -197,7 +196,7 @@ const footerSections = [
 }
 
 .footer-link:hover {
-  color: var(--primary-dark);
+  color: white
 }
 
 .footer-link-icon {

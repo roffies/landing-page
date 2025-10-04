@@ -108,7 +108,7 @@ const b2bBenefits = computed(() => [
 <style scoped>
 .benefits-section {
   padding: var(--spacing-xl) 0;
-  background: var(--accent-lightest);
+  background: transparent;
 }
 
 .benefits-container {

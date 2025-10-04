@@ -90,7 +90,7 @@ const faqs = [
 <style scoped>
 .faq-section {
   padding: var(--spacing-xxxl) var(--spacing-xl);
-  background: var(--accent-lightest);
+  background: transparent;
 }
 
 .faq-container {
