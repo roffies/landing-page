@@ -102,16 +102,58 @@
       }
     }
   },
+  "team": {
+    "title": "Our Team"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "costDrivers": {
+      "question": "Does SmartCare cost money for drivers?",
+      "answer": "No. Registration and use of SmartCare for drivers is completely free. You only pay for the services you contract at workshops."
+    },
+    "workshopVerification": {
+      "question": "How are workshops verified?",
+      "answer": "Each affiliated workshop goes through a validation process. We verify their information, reputation and reviews to ensure you only work with trusted businesses."
+    },
+    "citiesAvailable": {
+      "question": "In which cities does SmartCare work?",
+      "answer": "We are currently available in Lima and major cities in Peru. We are progressively expanding coverage to reach more drivers and workshops."
+    },
+    "emergencyRoad": {
+      "question": "What happens if I have an emergency on the road?",
+      "answer": "With SmartCare's SOS button, you can ask for help in seconds. We'll connect you with nearby tow trucks and workshops to resolve the situation as quickly as possible."
+    },
+    "maintenanceControl": {
+      "question": "Can I keep track of all my maintenance?",
+      "answer": "Yes. SmartCare keeps a digital record of every service performed on your vehicle, so you always have your maintenance information at hand."
+    },
+    "workshopFees": {
+      "question": "Does SmartCare charge workshops?",
+      "answer": "Workshop registration is free. We only apply a commission for each client that comes through the platform, ensuring workshops only pay when they get results."
+    }
+  },
   "footer": {
-    "description": "We modernize automotive maintenance by connecting drivers with verified workshops in Lima and throughout Peru.",
-    "forDrivers": "For Drivers",
-    "forWorkshops": "For Workshops",
-    "company": "Company",
+    "copyright": "© 2025 Roffies. All rights reserved",
+    "product": "Product",
+    "features": "Features",
     "benefits": "Benefits",
-    "howItWorks": "How It Works",
-    "contact": "Contact",
+    "company": "Company",
+    "faqs": "FAQs",
     "aboutUs": "About Us",
-    "terms": "Terms and Conditions",
-    "allRightsReserved": "All rights reserved"
+    "termsOfService": "Terms of Service",
+    "socialLinks": "Social Links",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn",
+    "featuresAriaLabel": "Go to features section",
+    "benefitsAriaLabel": "Go to benefits section",
+    "faqsAriaLabel": "Go to FAQs",
+    "aboutUsAriaLabel": "Go to about us section",
+    "termsOfServiceAriaLabel": "Go to terms of service",
+    "facebookAriaLabel": "Follow us on Facebook",
+    "instagramAriaLabel": "Follow us on Instagram",
+    "youtubeAriaLabel": "Follow us on YouTube",
+    "linkedinAriaLabel": "Follow us on LinkedIn"
   }
 }

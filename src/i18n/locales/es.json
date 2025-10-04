@@ -102,16 +102,58 @@
       }
     }
   },
+  "team": {
+    "title": "Nuestro Equipo"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "costDrivers": {
+      "question": "¿SmartCare tiene costo para conductores?",
+      "answer": "No. El registro y uso de SmartCare para conductores es totalmente gratuito. Solo pagarás los servicios que contrates en los talleres."
+    },
+    "workshopVerification": {
+      "question": "¿Cómo se verifican los talleres?",
+      "answer": "Cada taller afiliado pasa por un proceso de validación. Verificamos su información, reputación y reseñas para garantizar que solo trabajes con negocios de confianza."
+    },
+    "citiesAvailable": {
+      "question": "¿En qué ciudades funciona SmartCare?",
+      "answer": "Actualmente estamos disponibles en Lima y principales ciudades del Perú. Estamos ampliando la cobertura progresivamente para llegar a más conductores y talleres."
+    },
+    "emergencyRoad": {
+      "question": "¿Qué pasa si tengo una emergencia en carretera?",
+      "answer": "Con el botón SOS de SmartCare, podrás pedir ayuda en segundos. Te conectaremos con grúas y talleres cercanos para resolver la situación lo más rápido posible."
+    },
+    "maintenanceControl": {
+      "question": "¿Puedo llevar el control de todos mis mantenimientos?",
+      "answer": "Sí. SmartCare guarda un historial digital de cada servicio realizado en tu vehículo, para que tengas siempre a la mano la información de su mantenimiento."
+    },
+    "workshopFees": {
+      "question": "¿SmartCare cobra a los talleres?",
+      "answer": "El registro de talleres es gratuito. Solo aplicamos una comisión por cada cliente que llega a través de la plataforma, lo que asegura que los talleres paguen solo cuando obtienen resultados."
+    }
+  },
   "footer": {
-    "description": "Modernizamos el mantenimiento automotriz conectando conductores con talleres verificados en Lima y todo el Perú.",
-    "forDrivers": "Para Conductores",
-    "forWorkshops": "Para Talleres",
-    "company": "Empresa",
+    "copyright": "© 2025 Roffies. Todos los derechos reservados",
+    "product": "Producto",
+    "features": "Características",
     "benefits": "Beneficios",
-    "howItWorks": "Cómo Funciona",
-    "contact": "Contacto",
+    "company": "Empresa",
+    "faqs": "Preguntas Frecuentes",
     "aboutUs": "Sobre Nosotros",
-    "terms": "Términos y Condiciones",
-    "allRightsReserved": "Todos los derechos reservados"
+    "termsOfService": "Términos de Servicio",
+    "socialLinks": "Enlaces Sociales",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn",
+    "featuresAriaLabel": "Ir a la sección de características",
+    "benefitsAriaLabel": "Ir a la sección de beneficios",
+    "faqsAriaLabel": "Ir a las preguntas frecuentes",
+    "aboutUsAriaLabel": "Ir a la sección sobre nosotros",
+    "termsOfServiceAriaLabel": "Ir a los términos de servicio",
+    "facebookAriaLabel": "Síguenos en Facebook",
+    "instagramAriaLabel": "Síguenos en Instagram",
+    "youtubeAriaLabel": "Síguenos en YouTube",
+    "linkedinAriaLabel": "Síguenos en LinkedIn"
   }
 }
