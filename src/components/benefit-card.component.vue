@@ -34,6 +34,7 @@ defineProps<Props>()
         </h3>
         <p class="benefit-description">{{ description }}</p>
         <button 
+          type="button"
           class="benefit-cta"
           :aria-label="`${cta} - ${title}`"
         >
@@ -63,7 +64,7 @@ defineProps<Props>()
   grid-template-columns: repeat(4, 1fr);
   height: 100%;
   justify-items: inherit;
-  padding: 32px 24px;
+  padding: var(--spacing-xxl) var(--spacing-lg);
   border-radius: var(--border-radius-md);
 }
 
@@ -75,13 +76,9 @@ defineProps<Props>()
   order: 2;
 }
 
-.benefit-card--even {
-  background-color: var(--accent-lighter);
-}
-
 @media screen and (max-width: 479px) {
   .benefit-card {
-    padding: 32px 24px;
+    padding: var(--spacing-xxl) var(--spacing-lg);
     grid-column-gap: 8px;
     grid-row-gap: 20px;
   }
@@ -102,7 +99,7 @@ defineProps<Props>()
 .benefit-text {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--spacing-lg);
   text-align: left;
 }
 

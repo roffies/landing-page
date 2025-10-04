@@ -1,17 +1,29 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import LanguageSwitcher from './language-switcher.component.vue'
+import { useScrollBehavior } from '../composables/useScrollBehavior'
+import { useMobileMenu } from '../composables/useMobileMenu'
 
 const { t, locale } = useI18n()
+const { isVisible, hasBackground } = useScrollBehavior()
+const { isMenuOpen, toggleMenu, closeMenu } = useMobileMenu()
 
-const isMenuOpen = ref(false)
-const isVisible = ref(true)
-const lastScrollY = ref(0)
-const hasBackground = ref(false)
-
-const SCROLL_THRESHOLD = 100
 const SUPPORTED_LOCALES = ['es', 'en'] as const
+
+const setLanguage = (newLocale: string): void => {
+  if (SUPPORTED_LOCALES.includes(newLocale as any)) {
+    locale.value = newLocale
+    localStorage.setItem('locale', newLocale)
+  }
+}
+
+const initializeLocale = (): void => {
+  const savedLocale = localStorage.getItem('locale')
+  if (savedLocale && SUPPORTED_LOCALES.includes(savedLocale as any)) {
+    locale.value = savedLocale
+  }
+}
 
 const navigationLinks = [
   {
@@ -40,50 +52,16 @@ const navigationLinks = [
   }
 ] as const
 
-const toggleMenu = (): void => {
-  isMenuOpen.value = !isMenuOpen.value
-}
 
-const closeMenu = (): void => {
-  isMenuOpen.value = false
-}
 
-const handleScroll = (): void => {
-  const currentScrollY = window.scrollY
-  
-  if (currentScrollY > lastScrollY.value && currentScrollY > SCROLL_THRESHOLD) {
-    isVisible.value = false
-    isMenuOpen.value = false  // Cerrar mobile menu cuando navbar se oculta
-  } else {
-    isVisible.value = true
+watch(isVisible, (newValue) => {
+  if (!newValue) {
+    closeMenu()
   }
-  
-  hasBackground.value = currentScrollY > SCROLL_THRESHOLD && isVisible.value
-  
-  lastScrollY.value = currentScrollY
-}
-
-const setLanguage = (newLocale: string): void => {
-  if (SUPPORTED_LOCALES.includes(newLocale as any)) {
-    locale.value = newLocale
-    localStorage.setItem('locale', newLocale)
-  }
-}
-
-const initializeLocale = (): void => {
-  const savedLocale = localStorage.getItem('locale')
-  if (savedLocale && SUPPORTED_LOCALES.includes(savedLocale as any)) {
-    locale.value = savedLocale
-  }
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll, { passive: true })
-  initializeLocale()
 })
 
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
+onMounted(() => {
+  initializeLocale()
 })
 </script>
 
@@ -157,6 +135,7 @@ onUnmounted(() => {
     </div>
 
     <button 
+      type="button"
       class="mobile-menu-btn xl:hidden" 
       :aria-label="t('navbar.menuToggleAriaLabel')"
       :aria-expanded="isMenuOpen"
@@ -175,7 +154,7 @@ onUnmounted(() => {
     <div 
       class="mobile-menu" 
       :class="{ 'mobile-menu-open': isMenuOpen }"
-      role="menu"
+      role="navigation"
       :aria-label="t('navbar.mobileMenuAriaLabel')"
     >
       <ul 
@@ -232,22 +211,24 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
+  height: var(--navbar-height);
   background: transparent !important;
+  -webkit-backdrop-filter: none;
   backdrop-filter: none;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
-  z-index: 1000;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 var(--spacing-xl);
+  z-index: var(--z-dropdown);
+  transition: var(--transitions-cubic-bezier);
   transform: translateY(0);
 }
 
 .navbar-visible {
   transform: translateY(0);
   background: transparent !important;
+  -webkit-backdrop-filter: none;
   backdrop-filter: none;
   box-shadow: none;
 }
@@ -255,6 +236,7 @@ onUnmounted(() => {
 .navbar-hidden {
   transform: translateY(-100%);
   background: transparent !important;
+  -webkit-backdrop-filter: none;
   backdrop-filter: none;
   box-shadow: none;
 }
@@ -266,6 +248,7 @@ onUnmounted(() => {
     rgba(66, 103, 102, 0.9) 50%,
     rgba(66, 103, 102, 0.8) 100%
   ) !important;
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   box-shadow: 0 4px 20px rgba(66, 103, 102, 0.4);
 }
@@ -282,13 +265,13 @@ onUnmounted(() => {
   gap: 0.5rem;
   color: white;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: var(--transitions-normal);
 }
 
 
 .logo-image {
-  width: 40px;
-  height: 40px;
+  width: var(--logo-size);
+  height: var(--logo-size);
   object-fit: contain;
 }
 
@@ -314,7 +297,7 @@ onUnmounted(() => {
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: var(--transitions-normal);
   position: relative;
   overflow: hidden;
 }
@@ -327,7 +310,7 @@ onUnmounted(() => {
   width: 0;
   height: 2px;
   background: var(--primary-light);
-  transition: all 0.3s ease;
+  transition: var(--transitions-normal);
   transform: translateX(-50%);
 }
 
@@ -354,7 +337,7 @@ onUnmounted(() => {
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: var(--transitions-normal);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -393,7 +376,7 @@ onUnmounted(() => {
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
-  transition: all 0.3s ease;
+  transition: var(--transitions-normal);
 }
 
 .mobile-menu-btn:hover {
@@ -411,12 +394,11 @@ onUnmounted(() => {
   z-index: 998;
 }
 
-/* Mobile Menu */
 .mobile-menu {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 280px;
+  width: var(--mobile-menu-width);
   height: 100vh;
   background: linear-gradient(
     180deg,
@@ -424,6 +406,7 @@ onUnmounted(() => {
     rgba(66, 103, 102, 0.9) 50%,
     rgba(66, 103, 102, 0.8) 100%
   );
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   transition: right 0.3s ease;
   z-index: 999;
@@ -476,7 +459,7 @@ onUnmounted(() => {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: var(--transitions-normal);
 }
 
 .mobile-auth .auth-link:hover {
@@ -509,7 +492,6 @@ onUnmounted(() => {
   transform: translateY(-2px) !important;
 }
 
-/* Responsive Utilities */
 .hidden {
   display: none;
 }

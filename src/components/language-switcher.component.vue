@@ -18,6 +18,7 @@ defineEmits<{
     :aria-label="$t('navbar.languageSwitcherAriaLabel')"
   >
     <button 
+      type="button"
       class="lang-tab" 
       :class="{ active: currentLocale === 'es' }"
       :aria-label="$t('navbar.spanishAriaLabel')"
@@ -27,6 +28,7 @@ defineEmits<{
       ES
     </button>
     <button 
+      type="button"
       class="lang-tab" 
       :class="{ active: currentLocale === 'en' }"
       :aria-label="$t('navbar.englishAriaLabel')"
@@ -50,6 +52,7 @@ defineEmits<{
   background: rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   padding: 1px;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }

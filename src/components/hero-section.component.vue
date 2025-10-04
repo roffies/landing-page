@@ -29,6 +29,7 @@ const userLocation = ref('')
                 <div class="location-input">
                   <i class="pi pi-map-marker location-icon" aria-hidden="true"></i>
                   <InputText 
+                    id="location-input"
                     v-model="userLocation" 
                     :placeholder="t('hero.locationPlaceholder')"
                     class="location-field"
@@ -36,11 +37,11 @@ const userLocation = ref('')
                     autocomplete="address-level1"
                   />
                   <button 
+                    type="button"
                     v-if="userLocation" 
                     @click="userLocation = ''"
                     class="clear-btn"
                     aria-label="Limpiar ubicación"
-                    type="button"
                   >
                     <i class="pi pi-times" aria-hidden="true"></i>
                   </button>
@@ -77,7 +78,7 @@ const userLocation = ref('')
 .hero-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0 var(--spacing-xxxl);
   width: 100%;
 }
 
@@ -108,7 +109,7 @@ const userLocation = ref('')
 }
 
 .hero-title {
-  font-size: 5rem;
+  font-size: var(--font-size-hero-large);
   font-weight: 600;
   color: #fff;
   line-height: 1.1;
@@ -144,10 +145,10 @@ const userLocation = ref('')
     padding-top: 2vh;
   }
   .hero-container {
-    padding: 0 1rem;
+    padding: 0 var(--spacing-md);
   }
   .hero-title {
-    font-size: 2.5rem;
+    font-size: var(--font-size-hero-mobile);
   }
   .hero-subtitle {
     font-size: 0.9rem;
@@ -179,10 +180,10 @@ const userLocation = ref('')
     padding-top: 3vh;
   }
   .hero-container {
-    padding: 0 2rem;
+    padding: 0 var(--spacing-xl);
   }
   .hero-title {
-    font-size: 3.2rem;
+    font-size: var(--font-size-hero-tablet);
   }
   .hero-subtitle {
     font-size: 1rem;
@@ -226,7 +227,7 @@ const userLocation = ref('')
     padding-top: 8vh;
   }
   .hero-title {
-    font-size: 4.5rem;
+    font-size: var(--font-size-hero-desktop);
   }
   .hero-subtitle {
     font-size: 1.2rem;
