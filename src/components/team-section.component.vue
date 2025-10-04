@@ -43,7 +43,7 @@ const teamMembers = [
 </script>
 
 <template>
-  <section id="team" class="team-section" role="region" aria-label="Nuestro equipo de desarrollo">
+  <section id="team" class="team-section" role="region" :aria-label="t('team.ariaLabel')">
     <div class="team-container">
       <h2 class="team-title">{{ t('team.title') }}</h2>
       

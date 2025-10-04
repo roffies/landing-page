@@ -31,7 +31,12 @@
     "description": "With SmartCare receive maintenance alerts and find the nearest workshop to you.",
     "locationPlaceholder": "Enter your location",
     "searchButton": "See workshops",
-    "loginLink": "Sign in to see your recent activity"
+    "loginLink": "Sign in to see your recent activity",
+    "ariaLabel": "SmartCare main section",
+    "locationFieldAriaLabel": "Location field to search for workshops",
+    "clearLocationAriaLabel": "Clear location",
+    "searchButtonAriaLabel": "Search nearby workshops",
+    "loginLinkAriaLabel": "Sign in to see recent activity"
   },
   "functions": {
     "title": "How it works",
@@ -103,10 +108,12 @@
     }
   },
   "team": {
-    "title": "Our Team"
+    "title": "Our Team",
+    "ariaLabel": "Our development team"
   },
   "faq": {
     "title": "Frequently Asked Questions",
+    "ariaLabel": "Frequently asked questions",
     "costDrivers": {
       "question": "Does SmartCare cost money for drivers?",
       "answer": "No. Registration and use of SmartCare for drivers is completely free. You only pay for the services you contract at workshops."

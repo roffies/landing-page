@@ -9,7 +9,7 @@ const userLocation = ref('')
 </script>
 
 <template>
-  <section id="hero" class="hero-section" role="banner" aria-label="Sección principal de SmartCare">
+  <section id="hero" class="hero-section" role="banner" :aria-label="t('hero.ariaLabel')">
     <div class="hero-background">
       <img src="/images/hero-background.svg" alt="Fondo de SmartCare con ilustración de mantenimiento automotriz" class="hero-bg-image" />
     </div>
@@ -33,7 +33,7 @@ const userLocation = ref('')
                     v-model="userLocation" 
                     :placeholder="t('hero.locationPlaceholder')"
                     class="location-field"
-                    aria-label="Campo de ubicación para buscar talleres"
+                    :aria-label="t('hero.locationFieldAriaLabel')"
                     autocomplete="address-level1"
                   />
                   <button 
@@ -41,7 +41,7 @@ const userLocation = ref('')
                     v-if="userLocation" 
                     @click="userLocation = ''"
                     class="clear-btn"
-                    aria-label="Limpiar ubicación"
+                    :aria-label="t('hero.clearLocationAriaLabel')"
                   >
                     <i class="pi pi-times" aria-hidden="true"></i>
                   </button>
@@ -51,11 +51,11 @@ const userLocation = ref('')
               <Button 
                 :label="t('hero.searchButton')"
                 class="see-workshops-btn"
-                aria-label="Buscar talleres cercanos"
+                :aria-label="t('hero.searchButtonAriaLabel')"
                 type="button"
               />
 
-              <a href="#" class="login-link" aria-label="Iniciar sesión para ver actividad reciente" @click.prevent>{{ t('hero.loginLink') }}</a>
+              <a href="#" class="login-link" :aria-label="t('hero.loginLinkAriaLabel')" @click.prevent>{{ t('hero.loginLink') }}</a>
             </div>
           </div>
         </div>

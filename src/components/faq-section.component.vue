@@ -45,7 +45,7 @@ const faqs = [
 </script>
 
 <template>
-  <section id="faq" class="faq-section" role="region" aria-label="Preguntas frecuentes">
+  <section id="faq" class="faq-section" role="region" :aria-label="t('faq.ariaLabel')">
     <div class="faq-container">
       <h2 class="faq-title">{{ t('faq.title') }}</h2>
       

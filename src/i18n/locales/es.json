@@ -31,7 +31,12 @@
     "description": "Con SmartCare recibe alertas de mantenimiento y encuentra el taller más cercano a ti.",
     "locationPlaceholder": "Ingresa tu ubicación",
     "searchButton": "Ver talleres",
-    "loginLink": "Inicia sesión para ver tu actividad reciente"
+    "loginLink": "Inicia sesión para ver tu actividad reciente",
+    "ariaLabel": "Sección principal de SmartCare",
+    "locationFieldAriaLabel": "Campo de ubicación para buscar talleres",
+    "clearLocationAriaLabel": "Limpiar ubicación",
+    "searchButtonAriaLabel": "Buscar talleres cercanos",
+    "loginLinkAriaLabel": "Iniciar sesión para ver actividad reciente"
   },
   "functions": {
     "title": "Cómo funciona",
@@ -103,10 +108,12 @@
     }
   },
   "team": {
-    "title": "Nuestro Equipo"
+    "title": "Nuestro Equipo",
+    "ariaLabel": "Nuestro equipo de desarrollo"
   },
   "faq": {
     "title": "Preguntas frecuentes",
+    "ariaLabel": "Preguntas frecuentes",
     "costDrivers": {
       "question": "¿SmartCare tiene costo para conductores?",
       "answer": "No. El registro y uso de SmartCare para conductores es totalmente gratuito. Solo pagarás los servicios que contrates en los talleres."
