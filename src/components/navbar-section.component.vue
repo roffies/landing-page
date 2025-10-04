@@ -157,6 +157,15 @@ onMounted(() => {
       role="navigation"
       :aria-label="t('navbar.mobile-menu-aria-label')"
     >
+      <button 
+        class="mobile-menu-close"
+        type="button"
+        :aria-label="t('navbar.menu-close-aria-label')"
+        @click="closeMenu"
+      >
+        <i class="pi pi-times" aria-hidden="true"></i>
+      </button>
+      
       <ul 
         class="mobile-nav-links" 
         role="menubar"
@@ -382,6 +391,31 @@ onMounted(() => {
 .mobile-menu-btn:hover {
   background: var(--accent-lighter);
   color: var(--primary-dark);
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: var(--transitions-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.mobile-menu-close:hover {
+  background: var(--accent-lighter);
+  color: var(--primary-dark);
+  transform: scale(1.1);
 }
 
 .mobile-menu-overlay {

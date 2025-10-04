@@ -18,6 +18,7 @@
     "login-aria-label": "Login to the application",
     "register-aria-label": "Register in the application",
     "menu-toggle-aria-label": "Open mobile navigation menu",
+    "menu-close-aria-label": "Close navigation menu",
     "menu-overlay-aria-label": "Close navigation menu",
     "mobile-menu-aria-label": "Mobile navigation menu",
     "mobile-navigation-aria-label": "Mobile navigation",
