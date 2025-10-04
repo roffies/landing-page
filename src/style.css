@@ -23,7 +23,9 @@
   --border-radius-md: 12px;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -99,3 +101,23 @@ button:focus-visible {
 a:hover {
   color: #747bff;
 }
+
+/* Main container for general sections */
+.main-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 0 1rem;
+  }
+}
+
