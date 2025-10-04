@@ -33,6 +33,7 @@
     "searchButton": "See workshops",
     "loginLink": "Sign in to see your recent activity",
     "aria-label": "SmartCare main section",
+    "image-alt": "SmartCare interface showing vehicle maintenance and workshop search",
     "location-field-aria-label": "Location field to search for workshops",
     "clear-location-aria-label": "Clear location",
     "search-button-aria-label": "Search nearby workshops",
@@ -157,10 +158,12 @@
     "main-aria-label": "Main content",
     "title": "SmartCare - Vehicle Maintenance and Workshops in Peru",
     "description": "Find verified mechanical workshops in Peru. SmartCare offers predictive maintenance alerts, 24/7 emergency assistance and instant quotes. Free for drivers!",
-    "keywords": "vehicle maintenance, mechanical workshops Peru, vehicle assistance, car repair, mechanic near me, SmartCare"
+    "keywords": "vehicle maintenance, mechanical workshops Peru, vehicle assistance, car repair, mechanic near me, SmartCare",
+    "locale": "en_US"
   },
   "footer": {
     "aria-label": "SmartCare footer",
+    "logo-alt": "SmartCare logo",
     "copyright": "© 2025 Roffies. All rights reserved",
     "product": "Product",
     "features": "Features",

@@ -29,8 +29,7 @@ export function useMetaTags() {
     
     const ogLocale = document.querySelector('meta[property="og:locale"]')
     if (ogLocale) {
-      const localeCode = locale.value === 'en' ? 'en_US' : 'es_PE'
-      ogLocale.setAttribute('content', localeCode)
+      ogLocale.setAttribute('content', t('app.locale'))
     }
     
     document.documentElement.lang = locale.value

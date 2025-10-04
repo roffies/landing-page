@@ -39,7 +39,7 @@ const footerSections = [
           <div class="footer-brand">
             <img 
               src="/images/smartcare-logo.png" 
-              alt="SmartCare Logo" 
+              :alt="t('footer.logo-alt')" 
               class="footer-logo"
             />
             <p class="footer-copyright">

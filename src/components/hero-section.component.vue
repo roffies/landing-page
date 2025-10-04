@@ -11,7 +11,7 @@ const userLocation = ref('')
 <template>
   <section id="hero" class="hero-section" :aria-label="t('hero.aria-label')">
     <div class="hero-background">
-      <img src="/images/hero-background.svg" alt="Interfaz de SmartCare mostrando mantenimiento vehicular y búsqueda de talleres" class="hero-bg-image" />
+      <img src="/images/hero-background.svg" :alt="t('hero.image-alt')" class="hero-bg-image" />
     </div>
     
     <div class="hero-container">

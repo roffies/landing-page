@@ -33,6 +33,7 @@
     "searchButton": "Ver talleres",
     "loginLink": "Inicia sesión para ver tu actividad reciente",
     "aria-label": "Sección principal de SmartCare",
+    "image-alt": "Interfaz de SmartCare mostrando mantenimiento vehicular y búsqueda de talleres",
     "location-field-aria-label": "Campo de ubicación para buscar talleres",
     "clear-location-aria-label": "Limpiar ubicación",
     "search-button-aria-label": "Buscar talleres cercanos",
@@ -157,10 +158,12 @@
     "main-aria-label": "Contenido principal",
     "title": "SmartCare - Mantenimiento de Vehículos y Talleres en Perú",
     "description": "Encuentra talleres mecánicos verificados en Perú. SmartCare ofrece alertas de mantenimiento predictivo, asistencia de emergencia 24/7 y cotizaciones instantáneas. ¡Gratis para conductores!",
-    "keywords": "mantenimiento vehicular, talleres mecánicos Perú, asistencia vehicular, reparación de autos, mecánico cerca, SmartCare"
+    "keywords": "mantenimiento vehicular, talleres mecánicos Perú, asistencia vehicular, reparación de autos, mecánico cerca, SmartCare",
+    "locale": "es_PE"
   },
   "footer": {
     "aria-label": "Pie de página de SmartCare",
+    "logo-alt": "Logo de SmartCare",
     "copyright": "© 2025 Roffies. Todos los derechos reservados",
     "product": "Producto",
     "features": "Características",
