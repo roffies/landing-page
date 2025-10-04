@@ -53,6 +53,7 @@ const handleScroll = (): void => {
   
   if (currentScrollY > lastScrollY.value && currentScrollY > SCROLL_THRESHOLD) {
     isVisible.value = false
+    isMenuOpen.value = false  // Cerrar mobile menu cuando navbar se oculta
   } else {
     isVisible.value = true
   }
@@ -404,7 +405,7 @@ onUnmounted(() => {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: 998;
@@ -413,10 +414,10 @@ onUnmounted(() => {
 /* Mobile Menu */
 .mobile-menu {
   position: fixed;
-  top: 70px;
+  top: 0;
   right: -100%;
   width: 280px;
-  height: calc(100vh - 70px);
+  height: 100vh;
   background: linear-gradient(
     180deg,
     rgba(66, 103, 102, 0.98) 0%,
@@ -426,7 +427,7 @@ onUnmounted(() => {
   backdrop-filter: blur(20px);
   transition: right 0.3s ease;
   z-index: 999;
-  padding: 2rem;
+  padding: 5rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;

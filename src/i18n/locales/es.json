@@ -101,5 +101,17 @@
         "cta": "Crea tu perfil"
       }
     }
+  },
+  "footer": {
+    "description": "Modernizamos el mantenimiento automotriz conectando conductores con talleres verificados en Lima y todo el Perú.",
+    "forDrivers": "Para Conductores",
+    "forWorkshops": "Para Talleres",
+    "company": "Empresa",
+    "benefits": "Beneficios",
+    "howItWorks": "Cómo Funciona",
+    "contact": "Contacto",
+    "aboutUs": "Sobre Nosotros",
+    "terms": "Términos y Condiciones",
+    "allRightsReserved": "Todos los derechos reservados"
   }
 }

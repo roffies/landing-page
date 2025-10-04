@@ -101,5 +101,17 @@
         "cta": "Create your profile"
       }
     }
+  },
+  "footer": {
+    "description": "We modernize automotive maintenance by connecting drivers with verified workshops in Lima and throughout Peru.",
+    "forDrivers": "For Drivers",
+    "forWorkshops": "For Workshops",
+    "company": "Company",
+    "benefits": "Benefits",
+    "howItWorks": "How It Works",
+    "contact": "Contact",
+    "aboutUs": "About Us",
+    "terms": "Terms and Conditions",
+    "allRightsReserved": "All rights reserved"
   }
 }
