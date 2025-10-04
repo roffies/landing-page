@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import BenefitCard from './benefit-card.component.vue'
 
 const { t } = useI18n()
 
-const b2cBenefits = [
+const b2cBenefits = computed(() => [
   {
     hook: t('benefits.b2c.maintenance.hook'),
     title: t('benefits.b2c.maintenance.title'),
@@ -29,9 +30,9 @@ const b2cBenefits = [
     image: '/images/benefit-b2c-3.webp',
     imageAlt: t('benefits.b2c.savings.title')
   }
-] as const
+])
 
-const b2bBenefits = [
+const b2bBenefits = computed(() => [
   {
     hook: t('benefits.b2b.visibility.hook'),
     title: t('benefits.b2b.visibility.title'),
@@ -56,7 +57,7 @@ const b2bBenefits = [
     image: '/images/benefit-b2b-3.webp',
     imageAlt: t('benefits.b2b.reputation.title')
   }
-] as const
+])
 </script>
 
 <template>

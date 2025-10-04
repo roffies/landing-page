@@ -63,7 +63,7 @@ defineProps<Props>()
   grid-template-columns: repeat(4, 1fr);
   height: 100%;
   justify-items: inherit;
-  padding: 24px 16px;
+  padding: 32px 24px;
   border-radius: var(--border-radius-md);
 }
 
@@ -81,7 +81,7 @@ defineProps<Props>()
 
 @media screen and (max-width: 479px) {
   .benefit-card {
-    padding: 20px 12px;
+    padding: 32px 24px;
     grid-column-gap: 8px;
     grid-row-gap: 20px;
   }

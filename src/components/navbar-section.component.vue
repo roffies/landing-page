@@ -112,7 +112,7 @@ onUnmounted(() => {
     </div>
 
     <ul 
-      class="nav-links hidden lg:flex" 
+      class="nav-links hidden xl:flex" 
       role="menubar"
       :aria-label="t('navbar.navigationAriaLabel')"
     >
@@ -132,7 +132,7 @@ onUnmounted(() => {
       </li>
     </ul>
 
-    <div class="auth-lang hidden lg:flex">
+    <div class="auth-lang hidden xl:flex">
       <LanguageSwitcher 
         :current-locale="locale"
         @language-change="setLanguage"
@@ -156,7 +156,7 @@ onUnmounted(() => {
     </div>
 
     <button 
-      class="mobile-menu-btn lg:hidden" 
+      class="mobile-menu-btn xl:hidden" 
       :aria-label="t('navbar.menuToggleAriaLabel')"
       :aria-expanded="isMenuOpen"
       @click="toggleMenu"
@@ -386,9 +386,8 @@ onUnmounted(() => {
 
 
 .mobile-menu-btn {
-  background: var(--primary-medium);
-  border: 1px solid var(--primary-light);
-  border-radius: 8px;
+  background: transparent;
+  border: none;
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
@@ -397,9 +396,8 @@ onUnmounted(() => {
 }
 
 .mobile-menu-btn:hover {
-  background: var(--primary-light);
+  background: var(--accent-lighter);
   color: var(--primary-dark);
-  transform: scale(1.05);
 }
 
 .mobile-menu-overlay {
@@ -510,12 +508,12 @@ onUnmounted(() => {
   display: none;
 }
 
-@media (min-width: 1024px) {
-  .hidden.lg\\:flex {
+@media (min-width: 1200px) {
+  .hidden.xl\\:flex {
     display: flex;
   }
   
-  .lg\\:hidden {
+  .xl\\:hidden {
     display: none;
   }
 }
