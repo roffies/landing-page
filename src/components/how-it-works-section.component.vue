@@ -70,14 +70,14 @@ const processSteps = [
 .section {
   width: 100%;
   margin: 0;
-  padding: 40px 20px;
+  padding: var(--spacing-xxxl) var(--spacing-xl);
   background: var(--accent-light) !important;
   border-bottom: 1px solid var(--accent-light);
   box-sizing: border-box;
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: var(--font-size-hero-mobile);
   font-weight: 700;
   color: var(--primary-dark);
   margin: 0 auto 0.5rem auto;
@@ -106,14 +106,14 @@ const processSteps = [
 
 @media screen and (min-width: 600px) {
   .section-title {
-    font-size: 3rem;
+    font-size: var(--font-size-hero-tablet);
     max-width: 800px;
   }
 }
 
 @media screen and (min-width: 1136px) {
   .section-title {
-    font-size: 3.5rem;
+    font-size: var(--font-size-hero-desktop);
     max-width: 900px;
   }
 }

@@ -107,14 +107,14 @@ const b2bBenefits = computed(() => [
 
 <style scoped>
 .benefits-section {
-  padding: 2rem 0;
-  background: #ffffff;
+  padding: var(--spacing-xl) 0;
+  background: var(--accent-lightest);
 }
 
 .benefits-container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--spacing-md);
 }
 
 
@@ -131,7 +131,7 @@ const b2bBenefits = computed(() => [
 }
 
 .benefits-section-title {
-  font-size: 2.5rem;
+  font-size: var(--font-size-hero-mobile);
   font-weight: 700;
   color: var(--primary-dark);
   text-align: center;
@@ -148,7 +148,7 @@ const b2bBenefits = computed(() => [
   .benefits-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--spacing-xl);
   }
   
   .benefits-content {
@@ -156,7 +156,7 @@ const b2bBenefits = computed(() => [
   }
   
   .benefits-section-title {
-    font-size: 3rem;
+    font-size: var(--font-size-hero-tablet);
     margin-bottom: 4rem;
     max-width: 800px;
   }
@@ -170,7 +170,7 @@ const b2bBenefits = computed(() => [
   .benefits-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 3rem;
+    padding: 0 var(--spacing-xxl);
   }
   
   .benefits-content {
@@ -178,7 +178,7 @@ const b2bBenefits = computed(() => [
   }
   
   .benefits-section-title {
-    font-size: 3.5rem;
+    font-size: var(--font-size-hero-desktop);
     margin-bottom: 5rem;
     max-width: 900px;
   }
