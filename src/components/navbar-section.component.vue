@@ -417,7 +417,12 @@ onUnmounted(() => {
   right: -100%;
   width: 280px;
   height: calc(100vh - 70px);
-  background: var(--primary-dark);
+  background: linear-gradient(
+    180deg,
+    rgba(66, 103, 102, 0.98) 0%,
+    rgba(66, 103, 102, 0.9) 50%,
+    rgba(66, 103, 102, 0.8) 100%
+  );
   backdrop-filter: blur(20px);
   transition: right 0.3s ease;
   z-index: 999;
