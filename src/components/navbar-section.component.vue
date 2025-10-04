@@ -39,16 +39,16 @@ const navigationLinks = [
     ariaLabelKey: 'navbar.benefitsAriaLabel'
   },
   {
-    id: 'offerings',
-    href: '#ofrecemos',
-    labelKey: 'navbar.offerings',
-    ariaLabelKey: 'navbar.offeringsAriaLabel'
-  },
-  {
-    id: 'about',
+    id: 'team',
     href: '#team',
     labelKey: 'navbar.about',
     ariaLabelKey: 'navbar.aboutAriaLabel'
+  },
+  {
+    id: 'faq',
+    href: '#faq',
+    labelKey: 'navbar.faq',
+    ariaLabelKey: 'navbar.faqAriaLabel'
   }
 ] as const
 
