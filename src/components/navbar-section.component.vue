@@ -3,16 +3,14 @@ import { onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import LanguageSwitcher from './language-switcher.component.vue'
 import { useScrollBehavior } from '../composables/useScrollBehavior'
-import { useMobileMenu } from '../composables/useMobileMenu'
 
 const { t, locale } = useI18n()
-const { isVisible, hasBackground } = useScrollBehavior()
-const { isMenuOpen, toggleMenu, closeMenu } = useMobileMenu()
+const { isVisible, hasBackground, isMenuOpen, toggleMenu, closeMenu } = useScrollBehavior()
 
 const SUPPORTED_LOCALES = ['es', 'en'] as const
 
 const setLanguage = (newLocale: string): void => {
-  if (SUPPORTED_LOCALES.includes(newLocale as any)) {
+  if (SUPPORTED_LOCALES.includes(newLocale as typeof SUPPORTED_LOCALES[number])) {
     locale.value = newLocale
     localStorage.setItem('locale', newLocale)
   }
@@ -20,7 +18,7 @@ const setLanguage = (newLocale: string): void => {
 
 const initializeLocale = (): void => {
   const savedLocale = localStorage.getItem('locale')
-  if (savedLocale && SUPPORTED_LOCALES.includes(savedLocale as any)) {
+  if (savedLocale && SUPPORTED_LOCALES.includes(savedLocale as typeof SUPPORTED_LOCALES[number])) {
     locale.value = savedLocale
   }
 }
@@ -146,13 +144,13 @@ onMounted(() => {
 
     <div 
       v-if="isMenuOpen" 
-      class="mobile-menu-overlay" 
+      class="mobile-menu-overlay xl:hidden" 
       :aria-label="t('navbar.menu-overlay-aria-label')"
       @click="closeMenu"
     ></div>
 
     <div 
-      class="mobile-menu" 
+      class="mobile-menu xl:hidden" 
       :class="{ 'mobile-menu-open': isMenuOpen }"
       role="navigation"
       :aria-label="t('navbar.mobile-menu-aria-label')"
@@ -537,6 +535,14 @@ onMounted(() => {
   
   .xl\\:hidden {
     display: none;
+  }
+  
+  .mobile-menu {
+    display: none !important;
+  }
+  
+  .mobile-menu-overlay {
+    display: none !important;
   }
 }
 </style>

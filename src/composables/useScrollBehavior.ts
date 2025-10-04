@@ -6,12 +6,14 @@ export function useScrollBehavior() {
   const isVisible = ref(true)
   const lastScrollY = ref(0)
   const hasBackground = ref(false)
+  const isMenuOpen = ref(false)
 
   const handleScroll = (): void => {
     const currentScrollY = window.scrollY
     
     if (currentScrollY > lastScrollY.value && currentScrollY > SCROLL_THRESHOLD) {
       isVisible.value = false
+      isMenuOpen.value = false
     } else {
       isVisible.value = true
     }
@@ -19,6 +21,14 @@ export function useScrollBehavior() {
     hasBackground.value = currentScrollY > SCROLL_THRESHOLD && isVisible.value
     
     lastScrollY.value = currentScrollY
+  }
+
+  const toggleMenu = (): void => {
+    isMenuOpen.value = !isMenuOpen.value
+  }
+
+  const closeMenu = (): void => {
+    isMenuOpen.value = false
   }
 
   onMounted(() => {
@@ -32,6 +42,9 @@ export function useScrollBehavior() {
   return {
     isVisible,
     hasBackground,
+    isMenuOpen,
+    toggleMenu,
+    closeMenu,
     handleScroll
   }
 }
