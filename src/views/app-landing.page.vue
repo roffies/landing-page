@@ -3,58 +3,16 @@ import Navbar from "@/components/navbar-section.component.vue";
 import Footer from "@/components/footer-section.component.vue"
 import HeroSection from "@/components/hero-section.component.vue"
 import HowItWorksSection from "@/components/how-it-works-section.component.vue"
+import BenefitsSection from "@/components/benefits-section.component.vue"
 import Card from 'primevue/card'
 </script>
 
 <template>
   <Navbar />
   <HeroSection />
-  <div class="container">
   <HowItWorksSection />
-  <section id="beneficios" class="section" role="region" aria-label="Beneficios de SmartCare">
-    <div class="text-center mb-6">
-      <h2>Beneficios que mejoran tu experiencia</h2>
-      <p>Manten el control total del servicio con nuestras herramientas</p>
-    </div>
-    <div class="grid">
-      <div class="col-12 md:col-6 lg:col-3">
-        <div class="feature-card">
-          <div class="badge">1</div>
-          <i class="pi pi-cog" aria-hidden="true"></i>
-          <h3>Historial</h3>
-          <p>Historial digital de mantenimientos.</p>
-        </div>
-      </div>
-
-      <div class="col-12 md:col-6 lg:col-3">
-        <div class="feature-card">
-          <div class="badge">2</div>
-          <i class="pi pi-bolt" aria-hidden="true"></i>
-          <h3>Alerta</h3>
-          <p>Alertas de mantenimiento basadas en datos por marca y uso</p>
-        </div>
-      </div>
-
-      <div class="col-12 md:col-6 lg:col-3">
-        <div class="feature-card">
-          <div class="badge">3</div>
-          <i class="pi pi-shield" aria-hidden="true"></i>
-          <h3>Emergencias</h3>
-          <p>Para averías en ruta, directo con grúas y derivación automática al taller más cercano </p>
-        </div>
-      </div>
-
-      <div class="col-12 md:col-6 lg:col-3">
-        <div class="feature-card">
-          <div class="badge">4</div>
-          <i class="pi pi-users" aria-hidden="true"></i>
-          <h3>Mejores Precios</h3>
-          <p>Cotizador en tiempo real entre talleres afiliados</p>
-        </div>
-      </div>
-    </div>
-
-  </section>
+  <BenefitsSection />
+  <div class="main-container">
   <section id="ofrecemos" class="section" role="region" aria-label="Servicios que ofrecemos">
     <div class="flex flex-column lg:flex-row align-items-center gap-6">
       <div class="flex-1">

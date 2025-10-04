@@ -53,5 +53,53 @@
       "title": "Infórmate",
       "description": "Recibe notificaciones a tiempo real sobre mantenimientos de tu vehículo."
     }
+  },
+  "benefits": {
+    "title": "Beneficios que mejoran tu experiencia",
+    "subtitle": "Mantén el control total del servicio con nuestras herramientas",
+    "b2c": {
+      "title": "Para Conductores",
+      "sectionTitle": "Cuidando tu vehículo, cuidando tu tranquilidad",
+      "maintenance": {
+        "hook": "Cuida tu auto antes de que falle",
+        "title": "Mantenimiento inteligente y a tiempo",
+        "description": "Recibe recordatorios predictivos y guarda el historial digital de todos tus mantenimientos en un solo lugar",
+        "cta": "Descargar la app"
+      },
+      "emergency": {
+        "hook": "Nunca estarás solo en carretera",
+        "title": "Emergencias seguras en la ruta",
+        "description": "Activa el SOS y conecta en segundos con grúas o talleres cercanos que pueden asistirte al instante",
+        "cta": "Prueba SmartCare"
+      },
+      "savings": {
+        "hook": "Compara precios sin complicaciones",
+        "title": "Ahorro y transparencia",
+        "description": "Cotiza en tiempo real entre talleres verificados y elige el que mejor se ajuste a tus necesidades",
+        "cta": "Busca talleres ahora"
+      }
+    },
+    "b2b": {
+      "title": "Para Talleres",
+      "sectionTitle": "Desbloqueando oportunidades para talleres",
+      "visibility": {
+        "hook": "Haz que más conductores te encuentren",
+        "title": "Más visibilidad y clientes",
+        "description": "Aparece en búsquedas locales y recibe clientes nuevos cada semana gracias a SmartCare",
+        "cta": "Unirme como taller"
+      },
+      "management": {
+        "hook": "Cotiza más rápido, organiza mejor",
+        "title": "Gestión digital eficiente",
+        "description": "Automatiza presupuestos, administra clientes y centraliza su historial en la nube, todo desde un mismo lugar",
+        "cta": "Digitaliza tu taller"
+      },
+      "reputation": {
+        "hook": "Convierte la confianza en crecimiento",
+        "title": "Construye tu reputación",
+        "description": "Recibe reseñas verificadas de clientes satisfechos y destaca frente a otros talleres de tu zona",
+        "cta": "Crea tu perfil"
+      }
+    }
   }
 }

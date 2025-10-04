@@ -4,7 +4,7 @@
 
 <template>
   <footer class="main-footer">
-    <div class="footer-content">
+    <div class="container footer-content">
       <div class="footer-top">
         <div class="footer-support-text">
           <p>SmartCare es una startup tecnológica enfocada en modernizar el mantenimiento automotriz en Lima y, progresivamente, en todo el país. </p>
@@ -98,9 +98,7 @@
 }
 
 .footer-content {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 40px 20px 20px;
+  padding: 40px 0 20px;
 }
 
 .footer-top {

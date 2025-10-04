@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-
 interface Props {
   hook: string
   title: string
@@ -9,16 +7,19 @@ interface Props {
   image: string
   imageAlt: string
   isReversed?: boolean
+  isEven?: boolean
 }
 
 defineProps<Props>()
-const { t } = useI18n()
 </script>
 
 <template>
   <div 
     class="benefit-card grid" 
-    :class="{ 'benefit-card--reversed': isReversed }"
+    :class="{ 
+      'benefit-card--reversed': isReversed,
+      'benefit-card--even': isEven
+    }"
     role="article"
     :aria-labelledby="`benefit-title-${title.toLowerCase().replace(/\s+/g, '-')}`"
   >
@@ -56,13 +57,14 @@ const { t } = useI18n()
 .benefit-card {
   display: -ms-grid;
   display: grid;
-  grid-column-gap: 16px;
-  grid-row-gap: 36px;
+  grid-column-gap: 12px;
+  grid-row-gap: 24px;
   -ms-grid-columns: repeat(4, 1fr);
   grid-template-columns: repeat(4, 1fr);
   height: 100%;
   justify-items: inherit;
-  padding: 40px 24px;
+  padding: 24px 16px;
+  border-radius: var(--border-radius-md);
 }
 
 .benefit-card--reversed .benefit-content {
@@ -71,6 +73,18 @@ const { t } = useI18n()
 
 .benefit-card--reversed .benefit-image {
   order: 2;
+}
+
+.benefit-card--even {
+  background-color: var(--accent-lighter);
+}
+
+@media screen and (max-width: 479px) {
+  .benefit-card {
+    padding: 20px 12px;
+    grid-column-gap: 8px;
+    grid-row-gap: 20px;
+  }
 }
 
 .benefit-content {
@@ -102,7 +116,7 @@ const { t } = useI18n()
 }
 
 .benefit-title {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-dark);
   margin: 0;
@@ -150,32 +164,50 @@ const { t } = useI18n()
   height: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: var(--border-radius-lg);
+  border-radius: var(--border-radius-md);
 }
 
 
 @media screen and (min-width: 600px) {
   .benefit-card {
-    grid-column-gap: 36px;
-    grid-row-gap: 36px;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
     -ms-grid-columns: repeat(8, 1fr);
     grid-template-columns: repeat(8, 1fr);
-    padding: 56px 32px;
+    padding: 40px 20px;
+  }
+  
+  .benefit-title {
+    font-size: 1.8rem;
   }
   
   .benefit-content {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: -2;
-    grid-column: 1 / -1;
-    order: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / span 4;
+    order: 2;
   }
   
   .benefit-image {
     display: -ms-grid;
     display: grid;
     -ms-grid-column: 1;
-    -ms-grid-column-span: -2;
-    grid-column: 1 / -1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / span 4;
+    order: 1;
+  }
+  
+  .benefit-card--reversed .benefit-content {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / span 4;
+    order: 1;
+  }
+  
+  .benefit-card--reversed .benefit-image {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / span 4;
     order: 2;
   }
 }
@@ -187,6 +219,10 @@ const { t } = useI18n()
     -ms-grid-columns: repeat(12, 1fr);
     grid-template-columns: repeat(12, 1fr);
     padding: 64px 32px;
+  }
+  
+  .benefit-title {
+    font-size: 2.25rem;
   }
   
   .benefit-content {

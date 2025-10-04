@@ -14,7 +14,7 @@ const userLocation = ref('')
       <img src="/images/hero-background.svg" alt="Fondo de SmartCare con ilustración de mantenimiento automotriz" class="hero-bg-image" />
     </div>
     
-    <div class="container">
+    <div class="hero-container">
       <div class="grid justify-content-center">
         <div class="col-12">
           <div class="hero-content">
@@ -72,6 +72,13 @@ const userLocation = ref('')
   align-items: flex-start;
   justify-content: center;
   padding-top: 8vh;
+}
+
+.hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  width: 100%;
 }
 
 .hero-background {
@@ -136,6 +143,9 @@ const userLocation = ref('')
   .hero-section {
     padding-top: 2vh;
   }
+  .hero-container {
+    padding: 0 1rem;
+  }
   .hero-title {
     font-size: 2.5rem;
   }
@@ -167,6 +177,9 @@ const userLocation = ref('')
 @media (min-width: 481px) and (max-width: 768px) {
   .hero-section {
     padding-top: 3vh;
+  }
+  .hero-container {
+    padding: 0 2rem;
   }
   .hero-title {
     font-size: 3.2rem;

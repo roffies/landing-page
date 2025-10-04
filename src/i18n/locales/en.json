@@ -53,5 +53,53 @@
       "title": "Stay Informed",
       "description": "Receive real-time notifications about your vehicle maintenance."
     }
+  },
+  "benefits": {
+    "title": "Benefits that improve your experience",
+    "subtitle": "Keep total control of the service with our tools",
+    "b2c": {
+      "title": "For Drivers",
+      "sectionTitle": "Taking care of your vehicle, taking care of your peace of mind",
+      "maintenance": {
+        "hook": "Take care of your car before it fails",
+        "title": "Smart and timely maintenance",
+        "description": "Receive predictive reminders and save the digital history of all your maintenance in one place",
+        "cta": "Download the app"
+      },
+      "emergency": {
+        "hook": "You'll never be alone on the road",
+        "title": "Safe emergencies on the road",
+        "description": "Activate SOS and connect in seconds with nearby tow trucks or workshops that can assist you instantly",
+        "cta": "Try SmartCare"
+      },
+      "savings": {
+        "hook": "Compare prices without complications",
+        "title": "Savings and transparency",
+        "description": "Quote in real time between verified workshops and choose the one that best fits your needs",
+        "cta": "Find workshops now"
+      }
+    },
+    "b2b": {
+      "title": "For Workshops",
+      "sectionTitle": "Unlocking opportunity for workshops",
+      "visibility": {
+        "hook": "Make more drivers find you",
+        "title": "More visibility and customers",
+        "description": "Appear in local searches and receive new customers every week thanks to SmartCare",
+        "cta": "Join as workshop"
+      },
+      "management": {
+        "hook": "Quote faster, organize better",
+        "title": "Efficient digital management",
+        "description": "Automate quotes, manage customers and centralize their history in the cloud, all from one place",
+        "cta": "Digitize your workshop"
+      },
+      "reputation": {
+        "hook": "Turn trust into growth",
+        "title": "Build your reputation",
+        "description": "Receive verified reviews from satisfied customers and stand out from other workshops in your area",
+        "cta": "Create your profile"
+      }
+    }
   }
 }

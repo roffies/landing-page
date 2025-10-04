@@ -68,33 +68,37 @@ const b2bBenefits = [
   >
     <div class="benefits-container">
        <div class="benefits-content">
-         <div class="benefits-list">
-           <BenefitCard
-             v-for="(benefit, index) in b2cBenefits"
-             :key="`b2c-${index}`"
-             :hook="benefit.hook"
-             :title="benefit.title"
-             :description="benefit.description"
-             :cta="benefit.cta"
-             :image="benefit.image"
-             :image-alt="benefit.imageAlt"
-             :is-reversed="index % 2 === 1"
-           />
-         </div>
+        <div class="benefits-list">
+          <h2 class="benefits-section-title">{{ t('benefits.b2c.sectionTitle') }}</h2>
+          <BenefitCard
+            v-for="(benefit, index) in b2cBenefits"
+            :key="`b2c-${index}`"
+            :hook="benefit.hook"
+            :title="benefit.title"
+            :description="benefit.description"
+            :cta="benefit.cta"
+            :image="benefit.image"
+            :image-alt="benefit.imageAlt"
+            :is-reversed="index % 2 === 1"
+            :is-even="index % 2 === 0"
+          />
+        </div>
 
-         <div class="benefits-list">
-           <BenefitCard
-             v-for="(benefit, index) in b2bBenefits"
-             :key="`b2b-${index}`"
-             :hook="benefit.hook"
-             :title="benefit.title"
-             :description="benefit.description"
-             :cta="benefit.cta"
-             :image="benefit.image"
-             :image-alt="benefit.imageAlt"
-             :is-reversed="index % 2 === 1"
-           />
-         </div>
+        <div class="benefits-list">
+          <h2 class="benefits-section-title">{{ t('benefits.b2b.sectionTitle') }}</h2>
+          <BenefitCard
+            v-for="(benefit, index) in b2bBenefits"
+            :key="`b2b-${index}`"
+            :hook="benefit.hook"
+            :title="benefit.title"
+            :description="benefit.description"
+            :cta="benefit.cta"
+            :image="benefit.image"
+            :image-alt="benefit.imageAlt"
+            :is-reversed="index % 2 === 1"
+            :is-even="index % 2 === 1"
+          />
+        </div>
        </div>
     </div>
   </section>
@@ -103,17 +107,13 @@ const b2bBenefits = [
 <style scoped>
 .benefits-section {
   padding: 2rem 0;
-  background: linear-gradient(
-    135deg,
-    var(--accent-lightest) 0%,
-    rgba(255, 255, 255, 0.8) 50%,
-    var(--accent-lightest) 100%
-  );
+  background: #ffffff;
 }
 
 .benefits-container {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 
@@ -129,6 +129,16 @@ const b2bBenefits = [
   gap: 0;
 }
 
+.benefits-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-align: center;
+  margin: 0 auto 3rem auto;
+  line-height: 1.2;
+  max-width: 700px;
+}
+
 @media screen and (min-width: 600px) {
   .benefits-section {
     padding: 3rem 0;
@@ -137,10 +147,17 @@ const b2bBenefits = [
   .benefits-container {
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 2rem;
   }
   
   .benefits-content {
     gap: 1.5rem;
+  }
+  
+  .benefits-section-title {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    max-width: 800px;
   }
 }
 
@@ -152,10 +169,17 @@ const b2bBenefits = [
   .benefits-container {
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 3rem;
   }
   
   .benefits-content {
     gap: 2rem;
+  }
+  
+  .benefits-section-title {
+    font-size: 3.5rem;
+    margin-bottom: 5rem;
+    max-width: 900px;
   }
 }
 </style>

@@ -80,8 +80,10 @@ const processSteps = [
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-dark);
-  margin-bottom: 0.5rem;
+  margin: 0 auto 0.5rem auto;
   letter-spacing: -0.025em;
+  max-width: 700px;
+  text-align: center;
 }
 
 .section-subtitle {
@@ -102,6 +104,20 @@ const processSteps = [
 }
 
 
+@media screen and (min-width: 600px) {
+  .section-title {
+    font-size: 3rem;
+    max-width: 800px;
+  }
+}
+
+@media screen and (min-width: 1136px) {
+  .section-title {
+    font-size: 3.5rem;
+    max-width: 900px;
+  }
+}
+
 @media (max-width: 480px) {
   .section {
     padding: 20px 10px;
@@ -109,6 +125,7 @@ const processSteps = [
   
   .section-title {
     font-size: 1.8rem;
+    max-width: 600px;
   }
   
   .section-subtitle {
