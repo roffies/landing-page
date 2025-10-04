@@ -15,13 +15,13 @@ defineEmits<{
     class="language-switcher" 
     :class="class"
     role="group"
-    :aria-label="$t('navbar.languageSwitcherAriaLabel')"
+    :aria-label="$t('navbar.language-switcher-aria-label')"
   >
     <button 
       type="button"
       class="lang-tab" 
       :class="{ active: currentLocale === 'es' }"
-      :aria-label="$t('navbar.spanishAriaLabel')"
+      :aria-label="$t('navbar.spanish-aria-label')"
       :aria-pressed="currentLocale === 'es'"
       @click="$emit('languageChange', 'es')"
     >
@@ -31,7 +31,7 @@ defineEmits<{
       type="button"
       class="lang-tab" 
       :class="{ active: currentLocale === 'en' }"
-      :aria-label="$t('navbar.englishAriaLabel')"
+      :aria-label="$t('navbar.english-aria-label')"
       :aria-pressed="currentLocale === 'en'"
       @click="$emit('languageChange', 'en')"
     >

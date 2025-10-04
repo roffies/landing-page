@@ -9,9 +9,9 @@ const userLocation = ref('')
 </script>
 
 <template>
-  <section id="hero" class="hero-section" role="banner" :aria-label="t('hero.ariaLabel')">
+  <section id="hero" class="hero-section" :aria-label="t('hero.aria-label')">
     <div class="hero-background">
-      <img src="/images/hero-background.svg" alt="Fondo de SmartCare con ilustración de mantenimiento automotriz" class="hero-bg-image" />
+      <img src="/images/hero-background.svg" alt="Interfaz de SmartCare mostrando mantenimiento vehicular y búsqueda de talleres" class="hero-bg-image" />
     </div>
     
     <div class="hero-container">
@@ -22,7 +22,7 @@ const userLocation = ref('')
               <span class="d-block">{{ t('hero.title') }}</span>
               <span class="d-block">{{ t('hero.subtitle') }}</span>
             </h1>
-            <h2 class="hero-subtitle mb-5">{{ t('hero.description') }}</h2>
+            <p class="hero-subtitle mb-5">{{ t('hero.description') }}</p>
 
             <div class="location-inputs">
               <div class="location-input-container">
@@ -33,7 +33,7 @@ const userLocation = ref('')
                     v-model="userLocation" 
                     :placeholder="t('hero.locationPlaceholder')"
                     class="location-field"
-                    :aria-label="t('hero.locationFieldAriaLabel')"
+                    :aria-label="t('hero.location-field-aria-label')"
                     autocomplete="address-level1"
                   />
                   <button 
@@ -41,7 +41,7 @@ const userLocation = ref('')
                     v-if="userLocation" 
                     @click="userLocation = ''"
                     class="clear-btn"
-                    :aria-label="t('hero.clearLocationAriaLabel')"
+                    :aria-label="t('hero.clear-location-aria-label')"
                   >
                     <i class="pi pi-times" aria-hidden="true"></i>
                   </button>
@@ -51,11 +51,11 @@ const userLocation = ref('')
               <Button 
                 :label="t('hero.searchButton')"
                 class="see-workshops-btn"
-                :aria-label="t('hero.searchButtonAriaLabel')"
+                :aria-label="t('hero.search-button-aria-label')"
                 type="button"
               />
 
-              <a href="#" class="login-link" :aria-label="t('hero.loginLinkAriaLabel')" @click.prevent>{{ t('hero.loginLink') }}</a>
+              <a href="#" class="login-link" :aria-label="t('hero.login-link-aria-label')" @click.prevent>{{ t('hero.loginLink') }}</a>
             </div>
           </div>
         </div>

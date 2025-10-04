@@ -29,26 +29,26 @@ const navigationLinks = [
   {
     id: 'functions',
     href: '#funciones',
-    labelKey: 'navbar.functions',
-    ariaLabelKey: 'navbar.functionsAriaLabel'
+    'label-key': 'navbar.functions',
+    'aria-label-key': 'navbar.functions-aria-label'
   },
   {
     id: 'benefits',
     href: '#beneficios',
-    labelKey: 'navbar.benefits',
-    ariaLabelKey: 'navbar.benefitsAriaLabel'
+    'label-key': 'navbar.benefits',
+    'aria-label-key': 'navbar.benefits-aria-label'
   },
   {
     id: 'team',
     href: '#team',
-    labelKey: 'navbar.about',
-    ariaLabelKey: 'navbar.aboutAriaLabel'
+    'label-key': 'navbar.about',
+    'aria-label-key': 'navbar.about-aria-label'
   },
   {
     id: 'faq',
     href: '#faq',
-    labelKey: 'navbar.faq',
-    ariaLabelKey: 'navbar.faqAriaLabel'
+    'label-key': 'navbar.faq',
+    'aria-label-key': 'navbar.faq-aria-label'
   }
 ] as const
 
@@ -74,16 +74,16 @@ onMounted(() => {
       'navbar-with-background': hasBackground
     }"
     role="navigation"
-    :aria-label="t('navbar.ariaLabel')"
+    :aria-label="t('navbar.aria-label')"
   >
     <div class="logo">
       <a 
         href="#hero" 
-        :aria-label="t('navbar.logoAriaLabel')"
+        :aria-label="t('navbar.logo-aria-label')"
       >
         <img 
           src="/images/smartcare-logo.png" 
-          :alt="t('navbar.logoAlt')" 
+          :alt="t('navbar.logo-alt')" 
           class="logo-image" 
         />
         <span class="logo-text">{{ t('navbar.logo') }}</span>
@@ -93,7 +93,7 @@ onMounted(() => {
     <ul 
       class="nav-links hidden xl:flex" 
       role="menubar"
-      :aria-label="t('navbar.navigationAriaLabel')"
+      :aria-label="t('navbar.navigation-aria-label')"
     >
       <li 
         v-for="link in navigationLinks" 
@@ -102,11 +102,11 @@ onMounted(() => {
       >
         <a 
           :href="link.href" 
-          :aria-label="t(link.ariaLabelKey)"
+          :aria-label="t(link['aria-label-key'])"
           @click="closeMenu"
           role="menuitem"
         >
-          {{ t(link.labelKey) }}
+          {{ t(link['label-key']) }}
         </a>
       </li>
     </ul>
@@ -119,7 +119,7 @@ onMounted(() => {
       <a 
         href="#" 
         class="auth-link" 
-        :aria-label="t('navbar.loginAriaLabel')"
+        :aria-label="t('navbar.login-aria-label')"
         @click.prevent
       >
         {{ t('navbar.login') }}
@@ -127,7 +127,7 @@ onMounted(() => {
       <a 
         href="#" 
         class="auth-link register-btn" 
-        :aria-label="t('navbar.registerAriaLabel')"
+        :aria-label="t('navbar.register-aria-label')"
         @click.prevent
       >
         {{ t('navbar.register') }}
@@ -137,7 +137,7 @@ onMounted(() => {
     <button 
       type="button"
       class="mobile-menu-btn xl:hidden" 
-      :aria-label="t('navbar.menuToggleAriaLabel')"
+      :aria-label="t('navbar.menu-toggle-aria-label')"
       :aria-expanded="isMenuOpen"
       @click="toggleMenu"
     >
@@ -147,7 +147,7 @@ onMounted(() => {
     <div 
       v-if="isMenuOpen" 
       class="mobile-menu-overlay" 
-      :aria-label="t('navbar.menuOverlayAriaLabel')"
+      :aria-label="t('navbar.menu-overlay-aria-label')"
       @click="closeMenu"
     ></div>
 
@@ -155,12 +155,12 @@ onMounted(() => {
       class="mobile-menu" 
       :class="{ 'mobile-menu-open': isMenuOpen }"
       role="navigation"
-      :aria-label="t('navbar.mobileMenuAriaLabel')"
+      :aria-label="t('navbar.mobile-menu-aria-label')"
     >
       <ul 
         class="mobile-nav-links" 
         role="menubar"
-        :aria-label="t('navbar.mobileNavigationAriaLabel')"
+        :aria-label="t('navbar.mobile-navigation-aria-label')"
       >
         <li 
           v-for="link in navigationLinks" 
@@ -169,11 +169,11 @@ onMounted(() => {
         >
           <a 
             :href="link.href" 
-            :aria-label="t(link.ariaLabelKey)"
+            :aria-label="t(link['aria-label-key'])"
             @click="closeMenu"
             role="menuitem"
           >
-            {{ t(link.labelKey) }}
+            {{ t(link['label-key']) }}
           </a>
         </li>
       </ul>
@@ -187,7 +187,7 @@ onMounted(() => {
         <a 
           href="#" 
           class="auth-link" 
-          :aria-label="t('navbar.loginAriaLabel')"
+          :aria-label="t('navbar.login-aria-label')"
           @click.prevent="closeMenu"
         >
           {{ t('navbar.login') }}
@@ -195,7 +195,7 @@ onMounted(() => {
         <a 
           href="#" 
           class="auth-link register-btn" 
-          :aria-label="t('navbar.registerAriaLabel')"
+          :aria-label="t('navbar.register-aria-label')"
           @click.prevent="closeMenu"
         >
           {{ t('navbar.register') }}

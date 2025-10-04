@@ -6,32 +6,32 @@ const { t } = useI18n()
 
 const processSteps = [
   {
-    stepNumber: 1,
+    'step-number': 1,
     image: '/images/how-it-works-section-register.webp',
-    titleKey: 'functions.register.title',
-    descriptionKey: 'functions.register.description',
-    stepId: 'register'
+    'title-key': 'functions.register.title',
+    'description-key': 'functions.register.description',
+    'step-id': 'register'
   },
   {
-    stepNumber: 2,
+    'step-number': 2,
     image: '/images/how-it-works-section-get-quotes.webp',
-    titleKey: 'functions.quote.title',
-    descriptionKey: 'functions.quote.description',
-    stepId: 'quote'
+    'title-key': 'functions.quote.title',
+    'description-key': 'functions.quote.description',
+    'step-id': 'quote'
   },
   {
-    stepNumber: 3,
+    'step-number': 3,
     image: '/images/how-it-works-section-emergency.webp',
-    titleKey: 'functions.protect.title',
-    descriptionKey: 'functions.protect.description',
-    stepId: 'protect'
+    'title-key': 'functions.protect.title',
+    'description-key': 'functions.protect.description',
+    'step-id': 'protect'
   },
   {
-    stepNumber: 4,
+    'step-number': 4,
     image: '/images/how-it-works-section-notification.webp',
-    titleKey: 'functions.inform.title',
-    descriptionKey: 'functions.inform.description',
-    stepId: 'inform'
+    'title-key': 'functions.inform.title',
+    'description-key': 'functions.inform.description',
+    'step-id': 'inform'
   }
 ] as const
 </script>
@@ -55,12 +55,12 @@ const processSteps = [
     >
       <ProcessStep
         v-for="step in processSteps"
-        :key="step.stepId"
-        :step-number="step.stepNumber"
+        :key="step['step-id']"
+        :step-number="step['step-number']"
         :image="step.image"
-        :title-key="step.titleKey"
-        :description-key="step.descriptionKey"
-        :step-id="step.stepId"
+        :title-key="step['title-key']"
+        :description-key="step['description-key']"
+        :step-id="step['step-id']"
       />
     </div>
   </section>

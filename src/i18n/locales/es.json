@@ -7,23 +7,23 @@
     "faq": "Preguntas Frecuentes",
     "login": "Iniciar Sesión",
     "register": "Registrar",
-    "ariaLabel": "Navegación principal",
-    "logoAriaLabel": "Ir al inicio - SmartCare",
-    "logoAlt": "Logo de SmartCare",
-    "navigationAriaLabel": "Menú de navegación principal",
-    "functionsAriaLabel": "Ir a la sección de funciones",
-    "benefitsAriaLabel": "Ir a la sección de beneficios",
-    "aboutAriaLabel": "Ir a la sección sobre nosotros",
-    "faqAriaLabel": "Ir a la sección de preguntas frecuentes",
-    "loginAriaLabel": "Iniciar sesión en la aplicación",
-    "registerAriaLabel": "Registrarse en la aplicación",
-    "menuToggleAriaLabel": "Abrir menú de navegación móvil",
-    "menuOverlayAriaLabel": "Cerrar menú de navegación",
-    "mobileMenuAriaLabel": "Menú de navegación móvil",
-    "mobileNavigationAriaLabel": "Navegación móvil",
-    "languageSwitcherAriaLabel": "Selector de idioma",
-    "spanishAriaLabel": "Cambiar a español",
-    "englishAriaLabel": "Cambiar a inglés"
+    "aria-label": "Navegación principal",
+    "logo-aria-label": "Ir al inicio - SmartCare",
+    "logo-alt": "Logo de SmartCare",
+    "navigation-aria-label": "Menú de navegación principal",
+    "functions-aria-label": "Ir a la sección de funciones",
+    "benefits-aria-label": "Ir a la sección de beneficios",
+    "about-aria-label": "Ir a la sección sobre nosotros",
+    "faq-aria-label": "Ir a la sección de preguntas frecuentes",
+    "login-aria-label": "Iniciar sesión en la aplicación",
+    "register-aria-label": "Registrarse en la aplicación",
+    "menu-toggle-aria-label": "Abrir menú de navegación móvil",
+    "menu-overlay-aria-label": "Cerrar menú de navegación",
+    "mobile-menu-aria-label": "Menú de navegación móvil",
+    "mobile-navigation-aria-label": "Navegación móvil",
+    "language-switcher-aria-label": "Selector de idioma",
+    "spanish-aria-label": "Cambiar a español",
+    "english-aria-label": "Cambiar a inglés"
   },
   "hero": {
     "title": "Cuida tu auto",
@@ -32,36 +32,43 @@
     "locationPlaceholder": "Ingresa tu ubicación",
     "searchButton": "Ver talleres",
     "loginLink": "Inicia sesión para ver tu actividad reciente",
-    "ariaLabel": "Sección principal de SmartCare",
-    "locationFieldAriaLabel": "Campo de ubicación para buscar talleres",
-    "clearLocationAriaLabel": "Limpiar ubicación",
-    "searchButtonAriaLabel": "Buscar talleres cercanos",
-    "loginLinkAriaLabel": "Iniciar sesión para ver actividad reciente"
+    "aria-label": "Sección principal de SmartCare",
+    "location-field-aria-label": "Campo de ubicación para buscar talleres",
+    "clear-location-aria-label": "Limpiar ubicación",
+    "search-button-aria-label": "Buscar talleres cercanos",
+    "login-link-aria-label": "Iniciar sesión para ver actividad reciente"
   },
   "functions": {
     "title": "Cómo funciona",
     "subtitle": "Pasos para el control total del mantenimiento de tu vehículo",
     "step": "Paso",
+      "step-aria-label": "Paso número {number}",
     "register": {
       "title": "Registra",
-      "description": "Registra tu vehículo en SmartCare para obtener todas nuestras funcionalidades"
+      "description": "Registra tu vehículo en SmartCare para obtener todas nuestras funcionalidades",
+      "image-alt": "Proceso de registro de vehículo en SmartCare mostrando usuario agregando detalles del auto en la app"
     },
     "quote": {
       "title": "Cotiza",
-      "description": "Genera una cotización para el mantenimiento de tu vehículo"
+      "description": "Genera una cotización para el mantenimiento de tu vehículo",
+      "image-alt": "Función de generación de cotizaciones SmartCare mostrando estimaciones de costos de mantenimiento de talleres verificados"
     },
     "protect": {
       "title": "Protégete",
-      "description": "Conecta con grúas y talleres cercanos en emergencias."
+      "description": "Conecta con grúas y talleres cercanos en emergencias.",
+      "image-alt": "Función de protección de emergencia SmartCare conectando conductores con grúas y talleres cercanos"
     },
     "inform": {
       "title": "Infórmate",
-      "description": "Recibe notificaciones a tiempo real sobre mantenimientos de tu vehículo."
+      "description": "Recibe notificaciones a tiempo real sobre mantenimientos de tu vehículo.",
+      "image-alt": "Sistema de notificaciones SmartCare mostrando alertas de mantenimiento en tiempo real y actualizaciones en dispositivo móvil"
     }
   },
   "benefits": {
     "title": "Beneficios que mejoran tu experiencia",
     "subtitle": "Mantén el control total del servicio con nuestras herramientas",
+      "cta-aria-label": "Más información sobre {title}",
+      "card-aria-label": "Tarjeta de beneficio: {title}",
     "b2c": {
       "title": "Para Conductores",
       "sectionTitle": "Cuidando tu vehículo, cuidando tu tranquilidad",
@@ -69,19 +76,22 @@
         "hook": "Cuida tu auto antes de que falle",
         "title": "Mantenimiento inteligente y a tiempo",
         "description": "Recibe recordatorios predictivos y guarda el historial digital de todos tus mantenimientos en un solo lugar",
-        "cta": "Descargar la app"
+        "cta": "Descargar la app",
+        "image-alt": "Aplicación SmartCare mostrando recordatorios de mantenimiento vehicular y panel de historial de servicios digital"
       },
       "emergency": {
         "hook": "Nunca estarás solo en carretera",
         "title": "Emergencias seguras en la ruta",
         "description": "Activa el SOS y conecta en segundos con grúas o talleres cercanos que pueden asistirte al instante",
-        "cta": "Prueba SmartCare"
+        "cta": "Prueba SmartCare",
+        "image-alt": "Función SOS de emergencia en la app SmartCare conectando conductores con grúas y talleres cercanos"
       },
       "savings": {
         "hook": "Compara precios sin complicaciones",
         "title": "Ahorro y transparencia",
         "description": "Cotiza en tiempo real entre talleres verificados y elige el que mejor se ajuste a tus necesidades",
-        "cta": "Busca talleres ahora"
+        "cta": "Busca talleres ahora",
+        "image-alt": "Herramienta de comparación de talleres SmartCare mostrando cotizaciones en tiempo real de proveedores de servicios automotrices verificados"
       }
     },
     "b2b": {
@@ -91,29 +101,33 @@
         "hook": "Haz que más conductores te encuentren",
         "title": "Más visibilidad y clientes",
         "description": "Aparece en búsquedas locales y recibe clientes nuevos cada semana gracias a SmartCare",
-        "cta": "Unirme como taller"
+        "cta": "Unirme como taller",
+        "image-alt": "Panel de taller mostrando mayor visibilidad de clientes y resultados de búsqueda local en la plataforma SmartCare"
       },
       "management": {
         "hook": "Cotiza más rápido, organiza mejor",
         "title": "Gestión digital eficiente",
         "description": "Automatiza presupuestos, administra clientes y centraliza su historial en la nube, todo desde un mismo lugar",
-        "cta": "Digitaliza tu taller"
+        "cta": "Digitaliza tu taller",
+        "image-alt": "Interfaz de gestión de taller SmartCare con cotizaciones automatizadas y seguimiento del historial de clientes"
       },
       "reputation": {
         "hook": "Convierte la confianza en crecimiento",
         "title": "Construye tu reputación",
         "description": "Recibe reseñas verificadas de clientes satisfechos y destaca frente a otros talleres de tu zona",
-        "cta": "Crea tu perfil"
+        "cta": "Crea tu perfil",
+        "image-alt": "Sistema de reputación de talleres en SmartCare mostrando reseñas verificadas de clientes y calificaciones"
       }
     }
   },
   "team": {
     "title": "Nuestro Equipo",
-    "ariaLabel": "Nuestro equipo de desarrollo"
+    "aria-label": "Nuestro equipo de desarrollo"
   },
   "faq": {
     "title": "Preguntas frecuentes",
-    "ariaLabel": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre la aplicación SmartCare de mantenimiento vehicular y búsqueda de talleres",
+    "aria-label": "Preguntas frecuentes sobre SmartCare",
     "costDrivers": {
       "question": "¿SmartCare tiene costo para conductores?",
       "answer": "No. El registro y uso de SmartCare para conductores es totalmente gratuito. Solo pagarás los servicios que contrates en los talleres."
@@ -139,28 +153,35 @@
       "answer": "El registro de talleres es gratuito. Solo aplicamos una comisión por cada cliente que llega a través de la plataforma, lo que asegura que los talleres paguen solo cuando obtienen resultados."
     }
   },
+  "app": {
+    "main-aria-label": "Contenido principal",
+    "title": "SmartCare - Mantenimiento de Vehículos y Talleres en Perú",
+    "description": "Encuentra talleres mecánicos verificados en Perú. SmartCare ofrece alertas de mantenimiento predictivo, asistencia de emergencia 24/7 y cotizaciones instantáneas. ¡Gratis para conductores!",
+    "keywords": "mantenimiento vehicular, talleres mecánicos Perú, asistencia vehicular, reparación de autos, mecánico cerca, SmartCare"
+  },
   "footer": {
+    "aria-label": "Pie de página de SmartCare",
     "copyright": "© 2025 Roffies. Todos los derechos reservados",
     "product": "Producto",
     "features": "Características",
     "benefits": "Beneficios",
     "company": "Empresa",
     "faqs": "Preguntas Frecuentes",
-    "aboutUs": "Sobre Nosotros",
-    "termsOfService": "Términos de Servicio",
-    "socialLinks": "Enlaces Sociales",
+    "about-us": "Sobre Nosotros",
+    "terms-of-service": "Términos de Servicio",
+    "social-links": "Enlaces Sociales",
     "facebook": "Facebook",
     "instagram": "Instagram",
     "youtube": "YouTube",
     "linkedin": "LinkedIn",
-    "featuresAriaLabel": "Ir a la sección de características",
-    "benefitsAriaLabel": "Ir a la sección de beneficios",
-    "faqsAriaLabel": "Ir a las preguntas frecuentes",
-    "aboutUsAriaLabel": "Ir a la sección sobre nosotros",
-    "termsOfServiceAriaLabel": "Ir a los términos de servicio",
-    "facebookAriaLabel": "Síguenos en Facebook",
-    "instagramAriaLabel": "Síguenos en Instagram",
-    "youtubeAriaLabel": "Síguenos en YouTube",
-    "linkedinAriaLabel": "Síguenos en LinkedIn"
+    "features-aria-label": "Ir a la sección de características",
+    "benefits-aria-label": "Ir a la sección de beneficios",
+    "faqs-aria-label": "Ir a las preguntas frecuentes",
+    "about-us-aria-label": "Ir a la sección sobre nosotros",
+    "terms-of-service-aria-label": "Ir a los términos de servicio",
+    "facebook-aria-label": "Síguenos en Facebook",
+    "instagram-aria-label": "Síguenos en Instagram",
+    "youtube-aria-label": "Síguenos en YouTube",
+    "linkedin-aria-label": "Síguenos en LinkedIn"
   }
 }

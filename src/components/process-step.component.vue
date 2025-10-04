@@ -17,31 +17,31 @@ const { t } = useI18n()
   <article 
     class="step-item"
     role="listitem"
-    :aria-labelledby="`step-title-${stepId}`"
-    :aria-describedby="`step-description-${stepId}`"
+    :aria-labelledby="'step-title-' + stepId"
+    :aria-describedby="'step-description-' + stepId"
   >
     <div class="step-image-container">
       <img 
         :src="image" 
-        :alt="t(titleKey)"
+        :alt="t(titleKey + '.image-alt')"
         class="step-image"
         loading="lazy"
       />
     </div>
     <div 
       class="step-number" 
-      :aria-label="`${t('functions.step')} ${stepNumber}`"
+      :aria-label="t('functions.step-aria-label', { number: stepNumber })"
     >
       {{ String(stepNumber).padStart(2, '0') }}
     </div>
     <h3 
-      :id="`step-title-${stepId}`" 
+      :id="'step-title-' + stepId" 
       class="step-title"
     >
       {{ t(titleKey) }}
     </h3>
     <p 
-      :id="`step-description-${stepId}`" 
+      :id="'step-description-' + stepId" 
       class="step-description"
     >
       {{ t(descriptionKey) }}

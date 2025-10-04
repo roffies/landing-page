@@ -15,12 +15,12 @@ const footerSections = [
     label: 'footer.company',
     links: [
       { title: 'footer.faqs', href: '#faq' },
-      { title: 'footer.aboutUs', href: '#team' },
-      { title: 'footer.termsOfService', href: '#terminos' }
+      { title: 'footer.about-us', href: '#team' },
+      { title: 'footer.terms-of-service', href: '#terminos' }
     ]
   },
   {
-    label: 'footer.socialLinks',
+    label: 'footer.social-links',
     links: [
       { title: 'footer.facebook', href: '#', icon: 'pi pi-facebook' },
       { title: 'footer.instagram', href: '#', icon: 'pi pi-instagram' },
@@ -32,7 +32,7 @@ const footerSections = [
 </script>
 
 <template>
-  <footer class="main-footer" role="contentinfo" aria-label="Pie de página de SmartCare">
+  <footer class="main-footer" role="contentinfo" :aria-label="t('footer.aria-label')">
     <div class="footer-content">
       <div class="footer-grid">
         <div class="footer-brand-section">
@@ -65,7 +65,7 @@ const footerSections = [
                 <a 
                   :href="link.href"
                   class="footer-link"
-                  :aria-label="t(`${link.title}AriaLabel`)"
+                  :aria-label="t(link.title.replace(/([A-Z])/g, '-$1').toLowerCase().replace(/^-/, '') + '-aria-label')"
                 >
                   <i 
                     v-if="'icon' in link && link.icon" 

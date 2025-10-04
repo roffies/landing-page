@@ -7,23 +7,23 @@
     "faq": "FAQ",
     "login": "Sign In",
     "register": "Register",
-    "ariaLabel": "Main navigation",
-    "logoAriaLabel": "Go to home - SmartCare",
-    "logoAlt": "SmartCare logo",
-    "navigationAriaLabel": "Main navigation menu",
-    "functionsAriaLabel": "Go to functions section",
-    "benefitsAriaLabel": "Go to benefits section",
-    "aboutAriaLabel": "Go to about us section",
-    "faqAriaLabel": "Go to FAQ section",
-    "loginAriaLabel": "Login to the application",
-    "registerAriaLabel": "Register in the application",
-    "menuToggleAriaLabel": "Open mobile navigation menu",
-    "menuOverlayAriaLabel": "Close navigation menu",
-    "mobileMenuAriaLabel": "Mobile navigation menu",
-    "mobileNavigationAriaLabel": "Mobile navigation",
-    "languageSwitcherAriaLabel": "Language selector",
-    "spanishAriaLabel": "Switch to Spanish",
-    "englishAriaLabel": "Switch to English"
+    "aria-label": "Main navigation",
+    "logo-aria-label": "Go to home - SmartCare",
+    "logo-alt": "SmartCare logo",
+    "navigation-aria-label": "Main navigation menu",
+    "functions-aria-label": "Go to functions section",
+    "benefits-aria-label": "Go to benefits section",
+    "about-aria-label": "Go to about us section",
+    "faq-aria-label": "Go to FAQ section",
+    "login-aria-label": "Login to the application",
+    "register-aria-label": "Register in the application",
+    "menu-toggle-aria-label": "Open mobile navigation menu",
+    "menu-overlay-aria-label": "Close navigation menu",
+    "mobile-menu-aria-label": "Mobile navigation menu",
+    "mobile-navigation-aria-label": "Mobile navigation",
+    "language-switcher-aria-label": "Language selector",
+    "spanish-aria-label": "Switch to Spanish",
+    "english-aria-label": "Switch to English"
   },
   "hero": {
     "title": "Take care of your car",
@@ -32,36 +32,43 @@
     "locationPlaceholder": "Enter your location",
     "searchButton": "See workshops",
     "loginLink": "Sign in to see your recent activity",
-    "ariaLabel": "SmartCare main section",
-    "locationFieldAriaLabel": "Location field to search for workshops",
-    "clearLocationAriaLabel": "Clear location",
-    "searchButtonAriaLabel": "Search nearby workshops",
-    "loginLinkAriaLabel": "Sign in to see recent activity"
+    "aria-label": "SmartCare main section",
+    "location-field-aria-label": "Location field to search for workshops",
+    "clear-location-aria-label": "Clear location",
+    "search-button-aria-label": "Search nearby workshops",
+    "login-link-aria-label": "Sign in to see recent activity"
   },
   "functions": {
     "title": "How it works",
     "subtitle": "Steps for total control of your vehicle maintenance",
     "step": "Step",
+      "step-aria-label": "Step number {number}",
     "register": {
       "title": "Register",
-      "description": "Register your vehicle in SmartCare to get all our functionalities"
+      "description": "Register your vehicle in SmartCare to get all our functionalities",
+      "image-alt": "SmartCare vehicle registration process showing user adding car details to the app"
     },
     "quote": {
       "title": "Quote",
-      "description": "Generate a quote for your vehicle maintenance"
+      "description": "Generate a quote for your vehicle maintenance",
+      "image-alt": "SmartCare quote generation feature displaying maintenance cost estimates from verified workshops"
     },
     "protect": {
       "title": "Protect",
-      "description": "Connect with nearby tow trucks and workshops in emergencies."
+      "description": "Connect with nearby tow trucks and workshops in emergencies.",
+      "image-alt": "SmartCare emergency protection feature connecting drivers with nearby tow trucks and workshops"
     },
     "inform": {
       "title": "Stay Informed",
-      "description": "Receive real-time notifications about your vehicle maintenance."
+      "description": "Receive real-time notifications about your vehicle maintenance.",
+      "image-alt": "SmartCare notification system showing real-time maintenance alerts and updates on mobile device"
     }
   },
   "benefits": {
     "title": "Benefits that improve your experience",
-    "subtitle": "Keep total control of the service with our tools",
+    "subtitle": "Maintain full control of the service with our tools",
+      "cta-aria-label": "Learn more about {title}",
+      "card-aria-label": "Benefit card: {title}",
     "b2c": {
       "title": "For Drivers",
       "sectionTitle": "Taking care of your vehicle, taking care of your peace of mind",
@@ -69,19 +76,22 @@
         "hook": "Take care of your car before it fails",
         "title": "Smart and timely maintenance",
         "description": "Receive predictive reminders and save the digital history of all your maintenance in one place",
-        "cta": "Download the app"
+        "cta": "Download the app",
+        "image-alt": "SmartCare app showing vehicle maintenance reminders and digital service history dashboard"
       },
       "emergency": {
         "hook": "You'll never be alone on the road",
         "title": "Safe emergencies on the road",
         "description": "Activate SOS and connect in seconds with nearby tow trucks or workshops that can assist you instantly",
-        "cta": "Try SmartCare"
+        "cta": "Try SmartCare",
+        "image-alt": "Emergency SOS feature in SmartCare app connecting drivers with nearby tow trucks and workshops"
       },
       "savings": {
         "hook": "Compare prices without complications",
         "title": "Savings and transparency",
         "description": "Quote in real time between verified workshops and choose the one that best fits your needs",
-        "cta": "Find workshops now"
+        "cta": "Find workshops now",
+        "image-alt": "SmartCare workshop comparison tool showing real-time quotes from verified automotive service providers"
       }
     },
     "b2b": {
@@ -91,29 +101,33 @@
         "hook": "Make more drivers find you",
         "title": "More visibility and customers",
         "description": "Appear in local searches and receive new customers every week thanks to SmartCare",
-        "cta": "Join as workshop"
+        "cta": "Join as workshop",
+        "image-alt": "Workshop dashboard showing increased customer visibility and local search results in SmartCare platform"
       },
       "management": {
         "hook": "Quote faster, organize better",
         "title": "Efficient digital management",
         "description": "Automate quotes, manage customers and centralize their history in the cloud, all from one place",
-        "cta": "Digitize your workshop"
+        "cta": "Digitize your workshop",
+        "image-alt": "SmartCare workshop management interface with automated quotes and customer history tracking"
       },
       "reputation": {
         "hook": "Turn trust into growth",
         "title": "Build your reputation",
         "description": "Receive verified reviews from satisfied customers and stand out from other workshops in your area",
-        "cta": "Create your profile"
+        "cta": "Create your profile",
+        "image-alt": "Workshop reputation system in SmartCare showing verified customer reviews and ratings"
       }
     }
   },
   "team": {
     "title": "Our Team",
-    "ariaLabel": "Our development team"
+    "aria-label": "Our development team"
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "ariaLabel": "Frequently asked questions",
+    "subtitle": "Everything you need to know about SmartCare car maintenance and workshop finder app",
+    "aria-label": "Frequently asked questions about SmartCare",
     "costDrivers": {
       "question": "Does SmartCare cost money for drivers?",
       "answer": "No. Registration and use of SmartCare for drivers is completely free. You only pay for the services you contract at workshops."
@@ -139,28 +153,35 @@
       "answer": "Workshop registration is free. We only apply a commission for each client that comes through the platform, ensuring workshops only pay when they get results."
     }
   },
+  "app": {
+    "main-aria-label": "Main content",
+    "title": "SmartCare - Vehicle Maintenance and Workshops in Peru",
+    "description": "Find verified mechanical workshops in Peru. SmartCare offers predictive maintenance alerts, 24/7 emergency assistance and instant quotes. Free for drivers!",
+    "keywords": "vehicle maintenance, mechanical workshops Peru, vehicle assistance, car repair, mechanic near me, SmartCare"
+  },
   "footer": {
+    "aria-label": "SmartCare footer",
     "copyright": "© 2025 Roffies. All rights reserved",
     "product": "Product",
     "features": "Features",
     "benefits": "Benefits",
     "company": "Company",
     "faqs": "FAQs",
-    "aboutUs": "About Us",
-    "termsOfService": "Terms of Service",
-    "socialLinks": "Social Links",
+    "about-us": "About Us",
+    "terms-of-service": "Terms of Service",
+    "social-links": "Social Links",
     "facebook": "Facebook",
     "instagram": "Instagram",
     "youtube": "YouTube",
     "linkedin": "LinkedIn",
-    "featuresAriaLabel": "Go to features section",
-    "benefitsAriaLabel": "Go to benefits section",
-    "faqsAriaLabel": "Go to FAQs",
-    "aboutUsAriaLabel": "Go to about us section",
-    "termsOfServiceAriaLabel": "Go to terms of service",
-    "facebookAriaLabel": "Follow us on Facebook",
-    "instagramAriaLabel": "Follow us on Instagram",
-    "youtubeAriaLabel": "Follow us on YouTube",
-    "linkedinAriaLabel": "Follow us on LinkedIn"
+    "features-aria-label": "Go to features section",
+    "benefits-aria-label": "Go to benefits section",
+    "faqs-aria-label": "Go to FAQs",
+    "about-us-aria-label": "Go to about us section",
+    "terms-of-service-aria-label": "Go to terms of service",
+    "facebook-aria-label": "Follow us on Facebook",
+    "instagram-aria-label": "Follow us on Instagram",
+    "youtube-aria-label": "Follow us on YouTube",
+    "linkedin-aria-label": "Follow us on LinkedIn"
   }
 }

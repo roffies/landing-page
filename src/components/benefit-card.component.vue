@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
 interface Props {
   hook: string
   title: string
@@ -11,6 +13,7 @@ interface Props {
 }
 
 defineProps<Props>()
+const { t } = useI18n()
 </script>
 
 <template>
@@ -21,13 +24,13 @@ defineProps<Props>()
       'benefit-card--even': isEven
     }"
     role="article"
-    :aria-labelledby="`benefit-title-${title.toLowerCase().replace(/\s+/g, '-')}`"
+    :aria-label="t('benefits.card-aria-label', { title })"
   >
     <div class="benefit-content">
       <div class="benefit-text">
         <p class="benefit-hook">{{ hook }}</p>
         <h3 
-          :id="`benefit-title-${title.toLowerCase().replace(/\s+/g, '-')}`"
+          :id="'benefit-title-' + title.toLowerCase().replace(/\s+/g, '-')"
           class="benefit-title"
         >
           {{ title }}
@@ -36,7 +39,7 @@ defineProps<Props>()
         <button 
           type="button"
           class="benefit-cta"
-          :aria-label="`${cta} - ${title}`"
+          :aria-label="t('benefits.cta-aria-label', { title })"
         >
           {{ cta }}
         </button>

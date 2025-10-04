@@ -12,7 +12,7 @@ const b2cBenefits = computed(() => [
     description: t('benefits.b2c.maintenance.description'),
     cta: t('benefits.b2c.maintenance.cta'),
     image: '/images/benefit-b2c-1.webp',
-    imageAlt: t('benefits.b2c.maintenance.title')
+    imageAlt: t('benefits.b2c.maintenance.image-alt')
   },
   {
     hook: t('benefits.b2c.emergency.hook'),
@@ -20,7 +20,7 @@ const b2cBenefits = computed(() => [
     description: t('benefits.b2c.emergency.description'),
     cta: t('benefits.b2c.emergency.cta'),
     image: '/images/benefit-b2c-2.webp',
-    imageAlt: t('benefits.b2c.emergency.title')
+    imageAlt: t('benefits.b2c.emergency.image-alt')
   },
   {
     hook: t('benefits.b2c.savings.hook'),
@@ -28,7 +28,7 @@ const b2cBenefits = computed(() => [
     description: t('benefits.b2c.savings.description'),
     cta: t('benefits.b2c.savings.cta'),
     image: '/images/benefit-b2c-3.webp',
-    imageAlt: t('benefits.b2c.savings.title')
+    imageAlt: t('benefits.b2c.savings.image-alt')
   }
 ])
 
@@ -39,7 +39,7 @@ const b2bBenefits = computed(() => [
     description: t('benefits.b2b.visibility.description'),
     cta: t('benefits.b2b.visibility.cta'),
     image: '/images/benefit-b2b-1.webp',
-    imageAlt: t('benefits.b2b.visibility.title')
+    imageAlt: t('benefits.b2b.visibility.image-alt')
   },
   {
     hook: t('benefits.b2b.management.hook'),
@@ -47,7 +47,7 @@ const b2bBenefits = computed(() => [
     description: t('benefits.b2b.management.description'),
     cta: t('benefits.b2b.management.cta'),
     image: '/images/benefit-b2b-2.webp',
-    imageAlt: t('benefits.b2b.management.title')
+    imageAlt: t('benefits.b2b.management.image-alt')
   },
   {
     hook: t('benefits.b2b.reputation.hook'),
@@ -55,7 +55,7 @@ const b2bBenefits = computed(() => [
     description: t('benefits.b2b.reputation.description'),
     cta: t('benefits.b2b.reputation.cta'),
     image: '/images/benefit-b2b-3.webp',
-    imageAlt: t('benefits.b2b.reputation.title')
+    imageAlt: t('benefits.b2b.reputation.image-alt')
   }
 ])
 </script>
@@ -86,7 +86,7 @@ const b2bBenefits = computed(() => [
         </div>
 
         <div class="benefits-list">
-          <h2 class="benefits-section-title">{{ t('benefits.b2b.sectionTitle') }}</h2>
+          <h3 class="benefits-section-title">{{ t('benefits.b2b.sectionTitle') }}</h3>
           <BenefitCard
             v-for="(benefit, index) in b2bBenefits"
             :key="`b2b-${index}`"

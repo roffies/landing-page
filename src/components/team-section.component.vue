@@ -9,41 +9,41 @@ const teamMembers = [
     name: 'Johan Karl Bottger Salazar',
     role: 'Ingeniería de Software',
     image: '/images/Johan.jpg',
-    imageAlt: 'Johan Karl Bottger Salazar'
+    'image-alt': 'Johan Karl Bottger Salazar'
   },
   {
     id: 'luis',
     name: 'Luis Sebastián Rubio Ortiz',
     role: 'Ingeniería de Software',
     image: '/images/luis-sebastian-rubio-ortiz.jpg',
-    imageAlt: 'Luis Sebastián Rubio Ortiz'
+    'image-alt': 'Luis Sebastián Rubio Ortiz'
   },
   {
     id: 'rubens',
     name: 'Rubens Bendezú',
     role: 'Ingeniería de Software',
     image: '/images/profile-rubens-bendezu.jpeg',
-    imageAlt: 'Rubens Bendezú'
+    'image-alt': 'Rubens Bendezú'
   },
   {
     id: 'pierina',
     name: 'Pierina Almadroz Carbajal',
     role: 'Ingeniería de Software',
     image: '/images/pierina-almandroz-carbajal.jpeg',
-    imageAlt: 'Pierina Almadroz Carbajal'
+    'image-alt': 'Pierina Almadroz Carbajal'
   },
   {
     id: 'piero',
     name: 'Piero Angel Sulca Sanchez',
     role: 'Ingeniería de Software',
     image: '/images/piero-sulca-sanchez.png',
-    imageAlt: 'Piero Angel Sulca Sanchez'
+    'image-alt': 'Piero Angel Sulca Sanchez'
   }
 ] as const
 </script>
 
 <template>
-  <section id="team" class="team-section" role="region" :aria-label="t('team.ariaLabel')">
+  <section id="team" class="team-section" role="region" :aria-label="t('team.aria-label')">
     <div class="team-container">
       <h2 class="team-title">{{ t('team.title') }}</h2>
       
@@ -57,7 +57,7 @@ const teamMembers = [
           <div class="team-card-image">
             <img 
               :src="member.image" 
-              :alt="member.imageAlt" 
+              :alt="member['image-alt']" 
               class="team-img"
               loading="lazy"
             />

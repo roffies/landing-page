@@ -13,41 +13,42 @@ const toggleFaq = (index: number): void => {
 const faqs = [
   {
     id: 'cost-drivers',
-    questionKey: 'faq.costDrivers.question',
-    answerKey: 'faq.costDrivers.answer'
+    'question-key': 'faq.costDrivers.question',
+    'answer-key': 'faq.costDrivers.answer'
   },
   {
     id: 'workshop-verification',
-    questionKey: 'faq.workshopVerification.question',
-    answerKey: 'faq.workshopVerification.answer'
+    'question-key': 'faq.workshopVerification.question',
+    'answer-key': 'faq.workshopVerification.answer'
   },
   {
     id: 'cities-available',
-    questionKey: 'faq.citiesAvailable.question',
-    answerKey: 'faq.citiesAvailable.answer'
+    'question-key': 'faq.citiesAvailable.question',
+    'answer-key': 'faq.citiesAvailable.answer'
   },
   {
     id: 'emergency-road',
-    questionKey: 'faq.emergencyRoad.question',
-    answerKey: 'faq.emergencyRoad.answer'
+    'question-key': 'faq.emergencyRoad.question',
+    'answer-key': 'faq.emergencyRoad.answer'
   },
   {
     id: 'maintenance-control',
-    questionKey: 'faq.maintenanceControl.question',
-    answerKey: 'faq.maintenanceControl.answer'
+    'question-key': 'faq.maintenanceControl.question',
+    'answer-key': 'faq.maintenanceControl.answer'
   },
   {
     id: 'workshop-fees',
-    questionKey: 'faq.workshopFees.question',
-    answerKey: 'faq.workshopFees.answer'
+    'question-key': 'faq.workshopFees.question',
+    'answer-key': 'faq.workshopFees.answer'
   }
 ] as const
 </script>
 
 <template>
-  <section id="faq" class="faq-section" role="region" :aria-label="t('faq.ariaLabel')">
+  <section id="faq" class="faq-section" role="region" :aria-label="t('faq.aria-label')">
     <div class="faq-container">
       <h2 class="faq-title">{{ t('faq.title') }}</h2>
+      <p class="faq-subtitle">{{ t('faq.subtitle') }}</p>
       
       <div class="faq-list">
         <div 
@@ -60,10 +61,10 @@ const faqs = [
             type="button"
             class="faq-question"
             :aria-expanded="openFaq === index"
-            :aria-controls="`faq-answer-${faq.id}`"
+            :aria-controls="'faq-answer-' + faq.id"
             @click="toggleFaq(index)"
           >
-            <span class="faq-question-text">{{ t(faq.questionKey) }}</span>
+            <span class="faq-question-text">{{ t(faq['question-key']) }}</span>
             <i 
               class="pi faq-icon"
               :class="openFaq === index ? 'pi-chevron-up' : 'pi-chevron-right'"
@@ -72,13 +73,13 @@ const faqs = [
           </button>
           
           <div 
-            :id="`faq-answer-${faq.id}`"
+            :id="'faq-answer-' + faq.id"
             class="faq-answer"
             :class="{ 'faq-answer--open': openFaq === index }"
             role="region"
-            :aria-labelledby="`faq-question-${faq.id}`"
+            :aria-labelledby="'faq-question-' + faq.id"
           >
-            <p class="faq-answer-text">{{ t(faq.answerKey) }}</p>
+            <p class="faq-answer-text">{{ t(faq['answer-key']) }}</p>
           </div>
         </div>
       </div>
@@ -102,8 +103,19 @@ const faqs = [
   font-weight: 700;
   color: var(--primary-dark);
   text-align: center;
-  margin: 0 0 var(--spacing-xxxl) 0;
+  margin: 0 0 var(--spacing-md) 0;
   line-height: 1.2;
+}
+
+.faq-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--primary-medium);
+  text-align: center;
+  margin: 0 0 var(--spacing-xxxl) 0;
+  line-height: 1.4;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .faq-list {
@@ -193,6 +205,11 @@ const faqs = [
   
   .faq-title {
     font-size: var(--font-size-hero-tablet);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .faq-subtitle {
+    font-size: var(--font-size-md);
     margin-bottom: var(--spacing-xxl);
   }
   
@@ -214,6 +231,10 @@ const faqs = [
 @media screen and (max-width: 480px) {
   .faq-title {
     font-size: var(--font-size-hero-mobile);
+  }
+  
+  .faq-subtitle {
+    font-size: var(--font-size-sm);
   }
   
   .faq-question {
