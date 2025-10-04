@@ -96,7 +96,7 @@ const teamMembers = [
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--spacing-xl);
   margin-top: var(--spacing-xxl);
 }
@@ -117,9 +117,11 @@ const teamMembers = [
 
 .team-img {
   width: 100%;
+  max-width: 200px;
   aspect-ratio: 1;
   object-fit: cover;
   display: block;
+  margin: 0 auto;
 }
 
 .team-card-content {
@@ -155,33 +157,47 @@ const teamMembers = [
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .team-section {
     padding: var(--spacing-xxl) var(--spacing-md);
   }
   
   .team-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
   }
   
   .team-card {
-    width: 60%;
+    width: 100%;
   }
   
   .team-img {
     width: 100%;
+    max-width: 200px;
     aspect-ratio: 1;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
   .team-card {
-    width: 50%;
+    width: 100%;
   }
   
   .team-img {
     width: 100%;
+    max-width: 200px;
     aspect-ratio: 1;
   }
 }
