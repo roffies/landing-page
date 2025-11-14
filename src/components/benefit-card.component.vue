@@ -36,13 +36,14 @@ const { t } = useI18n()
           {{ title }}
         </h3>
         <p class="benefit-description">{{ description }}</p>
-        <button 
-          type="button"
+        <a 
+          href="https://front-end-alpha-weld.vercel.app/register"
+          target="_self"
           class="benefit-cta"
           :aria-label="t('benefits.cta-aria-label', { title })"
         >
           {{ cta }}
-        </button>
+        </a>
       </div>
     </div>
     
@@ -143,6 +144,8 @@ const { t } = useI18n()
   align-self: flex-start;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-decoration: none;
+  display: inline-block;
 }
 
 

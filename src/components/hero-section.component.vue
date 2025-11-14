@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import InputText from 'primevue/inputtext'
-import Button from 'primevue/button'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
@@ -48,14 +47,23 @@ const userLocation = ref('')
                 </div>
               </div>
 
-              <Button 
-                :label="t('hero.searchButton')"
+              <a 
+                href="https://front-end-alpha-weld.vercel.app/register"
+                target="_self"
                 class="see-workshops-btn"
                 :aria-label="t('hero.search-button-aria-label')"
-                type="button"
-              />
+              >
+                {{ t('hero.searchButton') }}
+              </a>
 
-              <a href="#" class="login-link" :aria-label="t('hero.login-link-aria-label')" @click.prevent>{{ t('hero.loginLink') }}</a>
+              <a 
+                href="https://front-end-alpha-weld.vercel.app/login" 
+                class="login-link" 
+                :aria-label="t('hero.login-link-aria-label')"
+                target="_self"
+              >
+                {{ t('hero.loginLink') }}
+              </a>
             </div>
           </div>
         </div>
@@ -326,8 +334,10 @@ const userLocation = ref('')
   transition: all 0.3s ease;
   margin: 1.5rem auto 1rem auto;
   box-shadow: 0 4px 15px rgba(59, 108, 90, 0.3);
-  display: block;
+  display: inline-block;
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
 }
 
 .see-workshops-btn:hover {
@@ -342,6 +352,7 @@ const userLocation = ref('')
   text-decoration: underline;
   font-size: 0.9rem;
   transition: color 0.2s ease;
+  display: block;
 }
 
 .login-link:hover {

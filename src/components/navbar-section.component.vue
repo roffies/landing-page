@@ -115,18 +115,18 @@ onMounted(() => {
         @language-change="setLanguage"
       />
       <a 
-        href="#" 
+        href="https://front-end-alpha-weld.vercel.app/login" 
         class="auth-link" 
         :aria-label="t('navbar.login-aria-label')"
-        @click.prevent
+        target="_self"
       >
         {{ t('navbar.login') }}
       </a>
       <a 
-        href="#" 
+        href="https://front-end-alpha-weld.vercel.app/register" 
         class="auth-link register-btn" 
         :aria-label="t('navbar.register-aria-label')"
-        @click.prevent
+        target="_self"
       >
         {{ t('navbar.register') }}
       </a>
@@ -192,18 +192,20 @@ onMounted(() => {
           class="mobile-lang-switcher"
         />
         <a 
-          href="#" 
+          href="https://front-end-alpha-weld.vercel.app/login" 
           class="auth-link" 
           :aria-label="t('navbar.login-aria-label')"
-          @click.prevent="closeMenu"
+          @click="closeMenu"
+          target="_self"
         >
           {{ t('navbar.login') }}
         </a>
         <a 
-          href="#" 
+          href="https://front-end-alpha-weld.vercel.app/register" 
           class="auth-link register-btn" 
           :aria-label="t('navbar.register-aria-label')"
-          @click.prevent="closeMenu"
+          @click="closeMenu"
+          target="_self"
         >
           {{ t('navbar.register') }}
         </a>
