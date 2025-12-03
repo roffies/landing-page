@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { defineProps } from 'vue'
 
 const { t } = useI18n()
 
-const props = defineProps({
+defineProps({
   videoSrc: { type: String, default: '' }
 })
 </script>
