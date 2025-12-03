@@ -126,6 +126,16 @@
     "title": "Nuestro Equipo",
     "aria-label": "Nuestro equipo de desarrollo"
   },
+  "aboutProduct": {
+    "title": "Sobre el Producto",
+    "aria-label": "Video sobre el producto",
+    "videoTitle": "Video sobre el producto"
+  },
+  "aboutTeam": {
+    "title": "Sobre el Equipo",
+    "aria-label": "Video sobre el equipo",
+    "videoTitle": "Video sobre el equipo"
+  },
   "faq": {
     "title": "Preguntas frecuentes",
     "subtitle": "Todo lo que necesitas saber sobre la aplicación SmartCare de mantenimiento vehicular y búsqueda de talleres",

@@ -7,6 +7,8 @@ import HowItWorksSection from "@/components/how-it-works-section.component.vue"
 import BenefitsSection from "@/components/benefits-section.component.vue"
 import TeamSection from "@/components/team-section.component.vue"
 import FaqSection from "@/components/faq-section.component.vue"
+import AboutProductSection from "@/components/about-product-section.component.vue"
+import AboutTeamSection from "@/components/about-team-section.component.vue"
 
 const { t } = useI18n()
 </script>
@@ -17,6 +19,8 @@ const { t } = useI18n()
     <HeroSection />
     <HowItWorksSection />
     <BenefitsSection />
+    <AboutProductSection video-src="https://www.youtube.com/embed/myYb8l1dgHc" />
+    <AboutTeamSection />
     <TeamSection />
     <FaqSection />
   </main>

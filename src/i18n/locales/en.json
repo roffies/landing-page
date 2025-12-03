@@ -126,6 +126,16 @@
     "title": "Our Team",
     "aria-label": "Our development team"
   },
+  "aboutProduct": {
+    "title": "About the Product",
+    "aria-label": "About the product video",
+    "videoTitle": "About the product video"
+  },
+  "aboutTeam": {
+    "title": "About the Team",
+    "aria-label": "About the team video",
+    "videoTitle": "About the team video"
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about SmartCare car maintenance and workshop finder app",
